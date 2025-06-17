@@ -7,7 +7,7 @@ import { AnimatedTooltip } from "./ui/animated-tooltip";
 
 const Nav = () => {
   return (
-    <nav className="w-full md:max-w-[350px] rounded-md bg-sec flex justify-evenly gap-1 py-2">
+    <nav className="w-full md:max-w-[350px] rounded-md bg-sec flex justify-evenly gap-1 py-2 ">
       <AnimatedTooltip name="Home">
         <Button>
           <AiFillHome className="icon-md" />
