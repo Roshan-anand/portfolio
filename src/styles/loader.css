@@ -1,8 +1,6 @@
 /* drop loader */
 .drop-loader {
   display: block;
-  width: 84px;
-  height: 84px;
   position: relative;
 }
 
@@ -12,16 +10,16 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 64px;
-  height: 64px;
+  width: 85%;
+  height: 85%;
   border-radius: 50%;
   background: #3cd9b3;
   transform: translate(-50%, -100%) scale(0);
-  animation: push_401 2s infinite linear;
+  animation: push_401 4s infinite linear;
 }
 
 .drop-loader:after {
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes push_401 {
@@ -66,7 +64,7 @@
   height: 1em;
   background-color: #3cd9b3;
   border-radius: 15%;
-  animation: rollingRock 2.5s cubic-bezier(0.79, 0, 0.47, 0.97) infinite;
+  animation: rollingRock 4s cubic-bezier(0.79, 0, 0.47, 0.97) infinite;
 }
 
 @keyframes rollingRock {
@@ -114,3 +112,33 @@
     transform: translate(0, -1em) rotate(-225deg);
   }
 }
+
+/* location loader */
+.loc-shape {
+  position: relative;
+  transform: rotate(45deg);
+  top: -2px;
+}
+
+.loc-shape:before,
+.loc-shape:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 0 50%;
+  background-image: radial-gradient(circle 5px at 50% 50%,#0000 94%, #3cd9b3);
+}
+
+.loc-shape:after {
+  animation: pulse-ytk0dhmd 4s infinite;
+  transform: perspective(336px) translateZ(0px);
+}
+
+@keyframes pulse-ytk0dhmd {
+  to {
+    transform: perspective(336px) translateZ(168px);
+    opacity: 0;
+  }
+}
+  
+
