@@ -130,13 +130,13 @@
 }
 
 .loc-shape:after {
-  animation: pulse-ytk0dhmd 4s infinite;
+  animation: pulse-ytk0dhmd 2s infinite;
   transform: perspective(336px) translateZ(0px);
 }
 
 @keyframes pulse-ytk0dhmd {
   to {
-    transform: perspective(336px) translateZ(168px);
+    transform: perspective(316px) translateZ(128px);
     opacity: 0;
   }
 }

@@ -3,6 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaHandPeace } from "react-icons/fa6";
 import { GrArchlinux } from "react-icons/gr";
 import "@/styles/loader.css";
+import Connect from "./Network";
 
 const Profile = () => {
   return (
@@ -20,8 +21,8 @@ const Profile = () => {
         </section>
 
         <section className="p-2 grow flex">
-          <figure className="grow flex justify-center items-center">
-            <div className="size-[200px] rounded-full border-2">a</div>
+          <figure className="hidden md:flex  justify-center items-center grow">
+            <Connect />
           </figure>
 
           <figure className="grow flex flex-col justify-center items-center">
@@ -43,11 +44,12 @@ const Profile = () => {
               <article className="flex items-center gap-3">
                 <GrArchlinux className="icon-sm text-accent-g" />
                 <p>
-                  I use <span className="text-accent-g font-bold">Arch</span> btw
+                  I use <span className="text-accent-g font-bold">Arch</span>{" "}
+                  btw
                 </p>
               </article>
 
-              <ul className="flex justify-between text-accent-g [&>a]:hover:scale-110 [&>a]:hover:rotate-3 [&>a]:hover:cursor-pointer">
+              <ul className="flex md:hidden justify-between text-accent-g [&>a]:hover:scale-110 [&>a]:hover:rotate-3 [&>a]:hover:cursor-pointer">
                 <a href="">
                   <FiGithub className="icon-sm" />
                 </a>
