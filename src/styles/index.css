@@ -87,5 +87,15 @@ p {
 }
 
 .container {
-  @apply w-[95%] mx-auto max-w-[1140px];
+  @apply w-[95%] mx-auto max-w-[1200px];
 }
+
+/* .border-gap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 110%;
+  height: 110%;
+  border: 1px solid red;
+} */
