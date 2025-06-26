@@ -18,7 +18,7 @@ const Profile = () => {
             <h1 className="text-lg font-bold leading-20">Roshan Anand</h1>
           </figure>
 
-          <figure className="grow flex flex-col justify-center border-b-2 border-border-one">
+          <figure className="grow flex flex-col justify-center border-b-2 border-border-one p-2">
             <div className="flex flex-col gap-4">
               <article className="flex  items-center gap-2">
                 <span className="drop-loader icon-sm"></span>
