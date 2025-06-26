@@ -1,6 +1,5 @@
 import { FiGithub, FiMail, FiTwitter } from "react-icons/fi";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaGlobe } from "react-icons/fa";
+import { FaLinkedinIn, FaDiscord, FaGlobe } from "react-icons/fa";
 
 const RootSvg = () => {
   return (
@@ -18,7 +17,7 @@ const RootSvg = () => {
       <circle fill="#666666" r="4" cx="36.7559" cy="53.5156"></circle>
       <circle fill="#666666" r="4" cx="98.0947" cy="53.5156"></circle>
       <circle fill="#666666" r="4" cx="164" cy="52"></circle>
-      <circle fill="#666666" r="4" cx="228" cy="52"></circle>
+      <circle fill="#3cd9b3" r="4" cx="228" cy="52"></circle>
       <circle fill="#666666" r="4" cx="4" cy="100"></circle>
       <circle fill="#3cd9b3" r="4" cx="68" cy="99.9922"></circle>
       <circle fill="#666666" r="4" cx="196" cy="100"></circle>
@@ -66,6 +65,14 @@ const Connect = () => {
         className="absolute -bottom-[7%] right-[19%] bg-prime-two rounded-full border-2 border-accent-g p-1"
       >
         <FaLinkedinIn className="icon-sm text-accent-g" />
+      </a>
+
+      <a
+        href="#"
+        target="_blank"
+        className="absolute -top-[2%] right-[20%] bg-prime-two rounded-full border-2 border-accent-g p-1"
+      >
+        <FaDiscord className="icon-sm text-accent-g" />
       </a>
     </div>
   );
