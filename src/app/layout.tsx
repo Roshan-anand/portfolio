@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Montserrat, PT_Sans, PT_Sans_Caption } from "next/font/google";
+import "@/styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const high = Montserrat({
   subsets: ["latin"],
+  weight: "700",
+  variable: "--font-high",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const medium = PT_Sans({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-medium",
+  display: "swap",
+});
+
+const small = PT_Sans_Caption({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-small",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,9 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${high.variable} ${medium.variable} ${small.variable} select-none`}>
         {children}
       </body>
     </html>
