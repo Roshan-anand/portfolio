@@ -1,10 +1,10 @@
 import React from "react";
-import { CgDarkMode } from "react-icons/cg";
 import { FaHandPeace, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { SiDiscord } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 import { FaGithub, FaSuitcase } from "react-icons/fa";
-import { Button } from "./ui/button";
+import ToggleDark from "./toggleDark";
+
 const Hero = () => {
   return (
     <section>
@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="flex justify-between items-start">
           <span>
             <h1 className="mr-auto">ROSHAN ANAND</h1>
-            <ul className="flex justify-between mt-3 [&>a]:hover:text-accent [&>a]:hover:scale-110">
+            <ul className="flex md:hidden justify-between mt-3 [&>a]:hover:text-accent [&>a]:hover:scale-110">
               <a href="https://github.com/Roshan-anand">
                 <FaGithub className="icon-sm" />
               </a>
@@ -30,9 +30,7 @@ const Hero = () => {
               </a>
             </ul>
           </span>
-          <Button>
-            <CgDarkMode className="icon-md" />
-          </Button>
+          <ToggleDark />
         </div>
         <div></div>
       </nav>
