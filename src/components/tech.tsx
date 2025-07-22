@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
-
+import { SiTraefikproxy } from "react-icons/si";
 const IconPaths = [
   "TypeScript",
   "Golang",
@@ -10,6 +10,7 @@ const IconPaths = [
   "Docker",
   "Git",
   "PostgreSQL",
+  "Traefik",
 ];
 
 const IconBtn = ({ title }: { title: string }) => {
@@ -19,8 +20,9 @@ const IconBtn = ({ title }: { title: string }) => {
         width={100}
         height={100}
         src={`/lang-icons/${title.toLowerCase()}.svg`}
-        className={`icon-sm ${
-          title === "NextJS" && "bg-white rounded-md p-[1px]"
+        className={`icon-md ${
+          (title === "Traefik" || title === "NextJS") &&
+          "bg-white rounded-md p-[1px]"
         }`}
         alt={`${title} Logo`}
       />

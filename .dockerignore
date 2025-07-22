@@ -1,0 +1,9 @@
+.env
+node_modules
+.next
+next-env.d.ts
+.git
+.gitignore
+out
+makefile
+README.md

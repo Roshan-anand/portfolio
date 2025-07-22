@@ -90,18 +90,18 @@ p {
 }
 
 .icon-lg {
-  width: clamp(2.5rem, 1.5rem + 3vw, 4rem);
-  height: clamp(2.5rem, 1.5rem + 3vw, 4rem);
-}
-
-.icon-md {
   width: clamp(1.75rem, 1rem + 2vw, 2.5rem);
   height: clamp(1.75rem, 1rem + 2vw, 2.5rem);
 }
 
+.icon-md {
+  width: 22px;
+  height: 22px;
+}
+
 .icon-sm {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 
 .container {

@@ -13,20 +13,23 @@ const Hero = () => {
           <span>
             <h1 className="mr-auto">ROSHAN ANAND</h1>
             <ul className="flex md:hidden justify-between mt-3 [&>a]:hover:text-accent [&>a]:hover:scale-110">
-              <a href="https://github.com/Roshan-anand">
-                <FaGithub className="icon-sm" />
+              <a href="https://github.com/Roshan-anand" target="_blank">
+                <FaGithub className="icon-md" />
               </a>
-              <a href="">
-                <FaXTwitter className="icon-sm" />
+              <a href="https://twitter.com/roshan4nand" target="_blank">
+                <FaXTwitter className="icon-md" />
               </a>
-              <a href="https://discord.com/users/rosanand">
-                <SiDiscord className="icon-sm" />
+              <a href="https://discord.com/users/rosanand" target="_blank">
+                <SiDiscord className="icon-md" />
               </a>
-              <a href="https://www.linkedin.com/in/roshan-anand-a92b1a23a/">
-                <FaLinkedinIn className="icon-sm" />
+              <a
+                href="https://www.linkedin.com/in/roshan-anand-a92b1a23a/"
+                target="_blank"
+              >
+                <FaLinkedinIn className="icon-md" />
               </a>
-              <a href="mailto:roshan4nand@gmail.com">
-                <MdEmail className="icon-sm" />
+              <a href="mailto:roshan4nand@gmail.com" target="_blank">
+                <MdEmail className="icon-md" />
               </a>
             </ul>
           </span>
@@ -36,8 +39,8 @@ const Hero = () => {
       </nav>
       <article className="mt-10 text-txt-soft">
         <span className="flex gap-1">
-          <FaHandPeace className="icon-sm text-accent -rotate-[8deg]" />
-          <h3>i'm 19-yrs-old developer based in india.</h3>
+          <FaHandPeace className="icon-md text-accent -rotate-[8deg]" />
+          <h3>{"i'm 19-yrs-old developer based in india."}</h3>
         </span>
         <h6>
           <a
@@ -49,9 +52,9 @@ const Hero = () => {
           </a>
         </h6>
         <p>
-          Currently available for internships, full-time opportunities, and
-          freelance projects. If you’re looking for Backend, Fullstack
-          developer, I'm your go-to person!
+          {
+            "Currently available for internships, full-time opportunities, and freelance projects. If you're looking for Backend, Fullstack developer, I'm your go-to person!"
+          }
         </p>
       </article>
     </section>
