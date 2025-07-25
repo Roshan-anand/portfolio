@@ -1,6 +1,9 @@
 services:
   web:
-    image: portfolio:0.2.0
+    image: portfolio:0.2.2
+    build:
+      context: .
+      dockerfile: Dockerfile
     networks:
       - proxy_net
     labels:
@@ -9,6 +12,7 @@ services:
       - "traefik.http.routers.webapp.entrypoints=websecure"
       - "traefik.http.routers.webapp.tls.certresolver=letsencrypt"
       - "traefik.http.services.webapp.loadbalancer.server.port=80"
+      - "traefik.constraint-label=head-proxy"
     deploy:
       update_config:
         order: start-first

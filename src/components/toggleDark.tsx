@@ -21,7 +21,7 @@ const lightVars = {
 };
 
 const ToggleDark = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const handleClick = () => {
     const vars = isDarkMode ? lightVars : darkVars;
     Object.entries(vars).forEach(([key, value]) => {

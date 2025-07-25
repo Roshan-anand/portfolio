@@ -2,17 +2,23 @@
 @import "tw-animate-css";
 
 :root {
-  --prime-one: #ffffff;
+  --prime-one: #121212;
+  --prime-two: #ffffff;
+  --txt-prime: #1f2937;
+  --txt-sec: #4b5563;
+  --border-one: #d1d5db;
+  --accent: #fbb626;
+  /* --prime-one: #ffffff;
   --prime-two: #121212;
   --txt-prime: #9ca3af;
   --txt-sec: #4b5563;
   --border-one: #52525b;
-  --accent: #fbb626;
-  /* --accent-r: #ff6a7b; */
-  /* --accent-g: #3cd9b3;
-  --accent-b: #6a7bff;
-  --accent-p: #e12b6d;
-  --accent-y: #fbb626; */
+  --accent: #fbb626; */
+  /* --accent: #ff6a7b; */
+  /* --accent: #3cd9b3; */
+  /* --accent-b: #6a7bff; */
+  /* --accent-p: #e12b6d; */
+  /* --accent-y: #fbb626; */
 }
 
 @theme {
@@ -22,11 +28,6 @@
   --color-txt-dim: var(--txt-sec);
   --color-brd-one: var(--border-one);
   --color-accent: var(--accent);
-  /* --color-accent-r: var(--accent-r);
-  --color-accent-g: var(--accent-g);
-  --color-accent-b: var(--accent-b);
-  --color-accent-p: var(--accent-p);
-  --color-accent-y: var(--accent-y); */
 
   --font-high: var(--font-high);
   --font-medium: var(--font-medium);
