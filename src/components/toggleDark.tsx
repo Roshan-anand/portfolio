@@ -8,7 +8,6 @@ const darkVars = {
   "--txt-prime": "#9ca3af",
   "--txt-sec": "#4b5563",
   "--border-one": "#52525b",
-  "--accent": "#fbb626",
 };
 
 const lightVars = {
@@ -17,7 +16,6 @@ const lightVars = {
   "--txt-prime": "#1f2937",
   "--txt-sec": "#4b5563",
   "--border-one": "#d1d5db",
-  "--accent": "#fbb626",
 };
 
 const ToggleDark = () => {

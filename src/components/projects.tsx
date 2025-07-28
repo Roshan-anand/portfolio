@@ -30,7 +30,7 @@ const projects: Project[] = [
     designation: "Fullstack",
     description:
       "A podcast recording platform, were you can record and stream your podcast seamlesly",
-    livelink: "#",
+    livelink: "https://gopod.roshananand.cloud",
     repolink: "",
     tech: ["TypeScript", "Golang", "AWS_S3"],
   },

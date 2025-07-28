@@ -44,7 +44,7 @@ const Hero = () => {
         </span>
         <h6>
           <a
-            className="mt-5 mb-2 hover-anime-up w-fit py-1 px-2 flex items-center gap-2"
+            className="mt-5 mb-2 hover-anime-up w-fit py-1 px-2 flex items-center gap-2 shadow-txt-dim/15 shadow-[0px_8px_15px] "
             href="mailto:roshan4nand@gmail.com?subject=Interested in hiring you"
           >
             <FaSuitcase />
@@ -53,8 +53,10 @@ const Hero = () => {
         </h6>
         <p>
           {
-            "Currently available for internships, full-time opportunities, and freelance projects. If you're looking for Backend, Fullstack developer, I'm your go-to person!"
+            "Currently available for internships, full-time opportunities, and freelance projects. If you're looking for "
           }
+          <span className="font-bold">Backend, Fullstack</span>
+          {" developer, I'm your go-to person!"}
         </p>
       </article>
     </section>

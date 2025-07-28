@@ -33,7 +33,7 @@ const IconBtn = ({ title }: { title: string }) => {
 const Tech = () => {
   return (
     <>
-      <h1 className="mt-10 mb-5">TECH STACK :</h1>
+      <h1 className="mt-10 mb-5 ">TECH STACK :</h1>
       <section className="flex flex-wrap gap-4">
         {IconPaths.map((title) => (
           <IconBtn key={title} title={title} />

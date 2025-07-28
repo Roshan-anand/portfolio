@@ -7,6 +7,7 @@ const page = () => {
   return (
     <main className="container mt-4 ">
       <Hero />
+      <hr className="text-brd-one my-10" />
       <Tech />
       <hr className="text-brd-one my-10" />
       <Projects />
