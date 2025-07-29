@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
-import { BiExport } from "react-icons/bi";
+import { RxArrowTopRight } from "react-icons/rx";
 import "@/styles/hover.css";
 
 type Project = {
@@ -22,7 +22,7 @@ const projects: Project[] = [
     description:
       "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time",
     livelink: "https://codejoin.roshananand.cloud",
-    repolink: "",
+    repolink: "https://github.com/Roshan-anand/code-join",
     tech: ["TypeScript", "NodeJS", "Docker", "Traefik"],
   },
   {
@@ -31,7 +31,7 @@ const projects: Project[] = [
     description:
       "A podcast recording platform, were you can record and stream your podcast seamlesly",
     livelink: "https://gopod.roshananand.cloud",
-    repolink: "",
+    repolink: "https://github.com/Roshan-anand/go-pod",
     tech: ["TypeScript", "Golang", "AWS_S3"],
   },
 ];
@@ -65,15 +65,15 @@ const DropDownBox = ({
           <div className="col-span-1 row-span-2 opacity-0 group-hover:opacity-100 transition-all duration-500 flex justify-end items-center gap-4 mr-3">
             <a
               href={repolink}
-              className="hover:scale-110 border rounded-full p-1"
+              className="transform hover:scale-110 transition-all duration-300 ease-in-out border rounded-full p-1"
             >
               <FaGithub className="icon-md" />
             </a>
             <a
               href={livelink}
-              className="hover:scale-110 border rounded-full p-1"
+              className="transform hover:scale-110 transition-all duration-300 ease-in-out border rounded-full p-1"
             >
-              <BiExport className="icon-md" />
+              <RxArrowTopRight className="icon-md" />
             </a>
           </div>
 
