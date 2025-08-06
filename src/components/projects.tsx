@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
-import { motion } from "motion/react";
+import React, { useEffect } from "react";
+import { motion, useAnimationControls } from "motion/react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { RxArrowTopRight } from "react-icons/rx";
 import "@/styles/hover.css";
+import { useMediaQuery } from "react-responsive";
 
 type Project = {
   title: string;
@@ -44,13 +45,35 @@ const DropDownBox = ({
   livelink,
   repolink,
 }: Project) => {
+  const controls = useAnimationControls();
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const handleMouseEnter = () => {
+    if (!isMobile) {
+      controls.start({ height: "auto" });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      controls.start({ height: 50 });
+    }
+  };
+
+  useEffect(() => {
+    if (isMobile) {
+      controls.set({ height: "auto" });
+    } else {
+      controls.set({ height: 50 });
+    }
+  }, [isMobile, controls]);
   return (
     <div>
       <motion.article
-        initial={{ height: 50 }}
-        whileHover={{
-          height: "auto",
-        }}
+        animate={controls}
+        initial={{ height: isMobile ? "auto" : 50 }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         transition={{
           duration: 0.37,
         }}
@@ -62,7 +85,7 @@ const DropDownBox = ({
             <h6>{designation}</h6>
           </div>
 
-          <div className="col-span-1 row-span-2 opacity-0 group-hover:opacity-100 transition-all duration-500 flex justify-end items-center gap-4 mr-3">
+          <div className="col-span-1 row-span-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-500 flex justify-end items-center gap-4 mr-3">
             <a
               href={repolink}
               className="transform hover:scale-110 transition-all duration-300 ease-in-out border rounded-full p-1"
