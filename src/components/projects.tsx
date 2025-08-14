@@ -6,12 +6,13 @@ import { FaGithub } from "react-icons/fa";
 import { RxArrowTopRight } from "react-icons/rx";
 import "@/styles/hover.css";
 import { useMediaQuery } from "react-responsive";
+import { MdOutlineWifiOff } from "react-icons/md";
 
 type Project = {
   title: string;
   designation: string;
   description: string;
-  livelink: string;
+  livelink: string | null;
   repolink: string;
   tech: string[];
 };
@@ -31,7 +32,7 @@ const projects: Project[] = [
     designation: "Fullstack",
     description:
       "A podcast recording platform, were you can record and stream your podcast seamlesly",
-    livelink: "https://gopod.roshananand.cloud",
+    livelink: null,
     repolink: "https://github.com/Roshan-anand/go-pod",
     tech: ["TypeScript", "Golang", "AWS_S3"],
   },
@@ -92,12 +93,16 @@ const DropDownBox = ({
             >
               <FaGithub className="icon-md" />
             </a>
-            <a
-              href={livelink}
-              className="transform hover:scale-110 transition-all duration-300 ease-in-out border rounded-full p-1"
-            >
-              <RxArrowTopRight className="icon-md" />
-            </a>
+            {livelink ? (
+              <a
+                href={livelink}
+                className="transform hover:scale-110 transition-all duration-300 ease-in-out border rounded-full p-1"
+              >
+                <RxArrowTopRight className="icon-md" />
+              </a>
+            ) : (
+              <MdOutlineWifiOff className="icon-md" />
+            )}
           </div>
 
           <figure className="gap-2 mb-3 flex col-span-2 row-span-1">
