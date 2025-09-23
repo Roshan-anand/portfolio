@@ -1,17 +1,13 @@
 import Hero from "@/components/hero";
-import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
 import Tech from "@/components/tech";
 
 const page = () => {
   return (
-    <main className="container mt-4 ">
+    <main className="w-[80%] max-w-[800px] mx-auto p-2 flex flex-col gap-[50px] bg-">
       <Hero />
-      <hr className="text-brd-one my-10" />
       <Tech />
-      <hr className="text-brd-one my-10" />
       <Projects />
-      <Navbar />
     </main>
   );
 };
