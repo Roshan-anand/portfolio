@@ -2,9 +2,8 @@ import React from "react";
 import { FaHandPeace, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { SiDiscord } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
-import { FaGithub, FaSuitcase } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import ToggleDark from "./toggleDark";
-import { Button, buttonVariants } from "./ui/button";
 
 const Hero = () => {
   return (
