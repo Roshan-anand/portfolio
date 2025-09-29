@@ -173,14 +173,14 @@ body {
     }
 
     h1 {
-        font-size: clamp(1.05rem, 0.735rem + 1.68vw, 1.575rem);
+        font-size: clamp(1.365rem, 0.9555rem + 2.184vw, 2.0475rem);
         line-height: 1.25;
     }
     h3 {
-        font-size: clamp(0.7875rem, 0.735rem + 0.28vw, 0.875rem);
+        font-size: clamp(1.02375rem, 0.9555rem + 0.364vw, 1.1375rem);
     }
     p {
-        font-size: clamp(0.6125rem, 0.56rem + 0.28vw, 0.7rem);
+        font-size: clamp(0.79625rem, 0.728rem + 0.364vw, 0.91rem);
     }
 
     .icon-lg {
