@@ -3,19 +3,19 @@ import ProjectBox from "./ui/projectBox";
 
 const projects: Project[] = [
   {
-    title: "CODE JOIN",
-    designation: ["Fullstack"],
+    title: "GPT MML",
+    designation: ["Fullstack","AI"],
     description:
-      "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
-    livelink: "https://codejoin.roshananand.cloud",
-    repolink: "https://github.com/Roshan-anand/code-join",
+      "Freelance Project : AI Chat Bot for Government competitive exam preparation. Provides MCQs, Mindmaps and Current Affairs.",
+    repolink: null,
+    livelink: null,
   },
 ];
 
-const Projects = () => {
+const Experince = () => {
   return (
     <section className="flex flex-col gap-2">
-      <h3> PROJECTS :</h3>
+      <h3> EXPERIENCE :</h3>
       <figure className="flex flex-col flex-wrap gap-4">
         {projects.map((info, i) => (
           <ProjectBox {...info} key={i} />
@@ -25,4 +25,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Experince;
