@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-import { RxArrowTopRight } from "react-icons/rx";
+import { LiaExternalLinkAltSolid } from "react-icons/lia";
 
 type Project = {
   title: string;
@@ -14,7 +14,7 @@ const projects: Project[] = [
     title: "CODE JOIN",
     designation: "Fullstack",
     description:
-      "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time",
+      "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
     livelink: "https://codejoin.roshananand.cloud",
     repolink: "https://github.com/Roshan-anand/code-join",
   },
@@ -28,22 +28,32 @@ const DropDownBox = ({
   repolink,
 }: Project) => {
   return (
-    <div className="border rounded-md p-2">
+    <div className="bg-card rounded-md p-4 relative">
       <header className="flex items-center gap-2">
         <h2>{title}</h2>
-        <p>{designation}</p>
-        <div className="ml-auto flex gap-2">
-          <a href={repolink} target="_blank" rel="noopener noreferrer">
-            <FaGithub className="icon-sm" />
+        <p className="text-secondary">{designation}</p>
+        <div className="ml-auto flex gap-4 p-2 px-4 rounded-b-sm absolute top-0 right-5 bg-background">
+          <a
+            href={repolink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110"
+          >
+            <FaGithub className="icon-md text-muted-foreground" />
           </a>
           {livelink && (
-            <a href={livelink} target="_blank" rel="noopener noreferrer">
-              <RxArrowTopRight className="icon-sm" />
+            <a
+              href={livelink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md hover:scale-110 bg-muted-foreground text-primary-foreground"
+            >
+              <LiaExternalLinkAltSolid className="icon-md "/>
             </a>
           )}
         </div>
       </header>
-      <p className="text-muted-foreground">{description}</p>
+      <p className="text-muted-foreground mt-3">{description}</p>
     </div>
   );
 };

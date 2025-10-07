@@ -40,9 +40,9 @@ const Tech = () => {
         {IconPaths.map(({ name, icon: Icon }) => (
           <div
             key={name}
-            className="font-bold bg-accent rounded-[0.2rem] p-[0.25rem] px-2 flex items-center gap-2 hover:shadow-[0px_5px_2px_1.5px] shadow-primary transform duration-150 hover:-translate-y-0.5 "
+            className="bg-input/30 border border-input/60 shadow-2xl rounded-sm p-[0.25rem] px-2 flex items-center gap-2"
           >
-            <Icon className="icon-md" />
+            <Icon className="icon-md " />
             <p>{name}</p>
           </div>
         ))}

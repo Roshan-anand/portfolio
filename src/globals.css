@@ -52,7 +52,7 @@
     --color-destructive: var(--destructive);
     --color-destructive-foreground: var(--destructive-foreground);
     --color-input: var(--input);
-    
+
     --font-sans: var(--font-sans);
     --font-mono: var(--font-mono);
     --font-serif: var(--font-serif);
@@ -81,12 +81,18 @@
     h1 {
         font-size: clamp(1.365rem, 0.9555rem + 2.184vw, 2.0475rem);
         line-height: 1.25;
+        color: var(--foreground);
+        font-weight: bold;
     }
     h3 {
         font-size: clamp(1.02375rem, 0.9555rem + 0.364vw, 1.1375rem);
+        color: var(--foreground);
+        font-weight: 700;
     }
     p {
         font-size: clamp(0.79625rem, 0.728rem + 0.364vw, 0.91rem);
+        color: var(--muted-foreground);
+        font-weight: 400;
     }
 
     .icon-lg {
