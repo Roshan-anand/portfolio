@@ -3,7 +3,6 @@ import { FaHandPeace, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { SiDiscord } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
-import ToggleDark from "./toggleDark";
 
 const Hero = () => {
   return (
@@ -33,7 +32,6 @@ const Hero = () => {
               </a>
             </ul>
           </span>
-          <ToggleDark />
         </div>
         <div></div>
       </nav>

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaDocker, FaNodeJs } from "react-icons/fa6";
 import { IconType } from "react-icons/lib";
-import { SiLangchain, SiPostgresql } from "react-icons/si";
+import { SiLangchain } from "react-icons/si";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { FaGitAlt } from "react-icons/fa";
 
@@ -42,7 +42,7 @@ const Tech = () => {
             key={name}
             className="font-bold bg-accent rounded-[0.2rem] p-[0.25rem] px-2 flex items-center gap-2 hover:shadow-[0px_5px_2px_1.5px] shadow-primary transform duration-150 hover:-translate-y-0.5 "
           >
-            <Icon className="icon-md"/>
+            <Icon className="icon-md" />
             <p>{name}</p>
           </div>
         ))}
