@@ -1,9 +1,8 @@
 import React from "react";
-import { FaDocker, FaNodeJs } from "react-icons/fa6";
+import { FaDocker, FaGolang } from "react-icons/fa6";
 import { IconType } from "react-icons/lib";
-import { SiLangchain } from "react-icons/si";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
-import { FaGitAlt } from "react-icons/fa";
+import { SiBun } from "react-icons/si";
 
 type TechIconType = {
   name: string;
@@ -14,22 +13,16 @@ const IconPaths: TechIconType[] = [
     name: "TypeScript",
     icon: BiLogoTypescript,
   },
-  { name: "PostgreSQL", icon: BiLogoPostgresql },
+  { name: "Golang", icon: FaGolang },
+  { name: "PSQL", icon: BiLogoPostgresql },
+  {
+    name: "Bun",
+    icon: SiBun,
+  },
   {
     name: "Docker",
     icon: FaDocker,
   },
-  { name: "LangChain", icon: SiLangchain },
-  {
-    name: "NodeJS",
-    icon: FaNodeJs,
-  },
-
-  { name: "Git", icon: FaGitAlt },
-  // // "Golang",
-  // // "NextJS",
-  // "Git",
-  // "Traefik",
 ];
 
 const Tech = () => {

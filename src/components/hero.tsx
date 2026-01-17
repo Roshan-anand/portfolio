@@ -15,9 +15,6 @@ const Hero = () => {
           <a href="https://twitter.com/roshan4nand" target="_blank">
             <FaXTwitter className="icon-md" />
           </a>
-          <a href="https://discord.com/users/rosanand" target="_blank">
-            <SiDiscord className="icon-md" />
-          </a>
           <a
             href="https://www.linkedin.com/in/roshan-anand-a92b1a23a/"
             target="_blank"
@@ -33,7 +30,7 @@ const Hero = () => {
         <span className="flex items-center my-4">
           <h1 className="-rotate-[30deg]">✌🏽</h1>
           <h3 className="text-muted-foreground">
-            19-yrs - FullStack - GenAI - Based in INDIA
+            20 | Backend | Cloud | Based in INDIA
           </h3>
         </span>
       </article>
