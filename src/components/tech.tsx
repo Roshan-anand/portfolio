@@ -27,7 +27,7 @@ const IconPaths: TechIconType[] = [
 
 const Tech = () => {
   return (
-    <section className="flex flex-col gap-2">
+    <section id="skills" className="flex flex-col gap-2 h-full ">
       <h3>Brain is filled with:</h3>
       <figure className="flex flex-wrap gap-4 items-center">
         {IconPaths.map(({ name, icon: Icon }) => (
