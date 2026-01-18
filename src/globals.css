@@ -2,69 +2,74 @@
 @import "tw-animate-css";
 
 :root {
-    --background: #1a1c1b;
-    --foreground: #fff;
-    --card: #2a2e2e;
-    --card-foreground: #fff;
-    --primary: #d9ecff;
-    --primary-foreground: #000;
-    --secondary: #cd7c2e;
-    --secondary-foreground: #fff;
-    --muted-foreground: #d9ecff;
-    --destructive: oklch(0.6368 0.2078 25.3313);
-    --destructive-foreground: oklch(0.9851 0 0);
-    --input: #555d58;
-    --font-sans: Geist Mono, ui-monospace, monospace;
-    --font-serif: serif;
-    --font-mono: JetBrains Mono, monospace;
-    --shadow-2xs: 0px 1px 4px 0px hsl(0 0% 0% / 0.03);
-    --shadow-xs: 0px 1px 4px 0px hsl(0 0% 0% / 0.03);
-    --shadow-sm:
-        0px 1px 4px 0px hsl(0 0% 0% / 0.05),
-        0px 1px 2px -1px hsl(0 0% 0% / 0.05);
-    --shadow:
-        0px 1px 4px 0px hsl(0 0% 0% / 0.05),
-        0px 1px 2px -1px hsl(0 0% 0% / 0.05);
-    --shadow-md:
-        0px 1px 4px 0px hsl(0 0% 0% / 0.05),
-        0px 2px 4px -1px hsl(0 0% 0% / 0.05);
-    --shadow-lg:
-        0px 1px 4px 0px hsl(0 0% 0% / 0.05),
-        0px 4px 6px -1px hsl(0 0% 0% / 0.05);
-    --shadow-xl:
-        0px 1px 4px 0px hsl(0 0% 0% / 0.05),
-        0px 8px 10px -1px hsl(0 0% 0% / 0.05);
-    --shadow-2xl: 0px 1px 4px 0px hsl(0 0% 0% / 0.13);
-    --tracking-normal: 0rem;
-    --spacing: 0.25rem;
+    --background: #fdfbf7;
+    --foreground: #1a1a1a;
+    --primary: #c4b0ff;
+    --secondary: #ffb3ba;
+    --muted: #bae1ff;
+    --accent: #98ff98;
+    --border: #000000;
+    --shadow-md: 4px 4px 0px 0px;
+    --shadow: 2px 2px 0px 0px;
+    --shadow-lg: 8px 8px 0px 0px;
+
+    --font-sans:
+        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    --radius: 0.5rem;
+}
+
+.dark {
+    --background: #121212;
+    --foreground: #e0e0e0;
+    --primary: #b19bff;
+    --secondary: #ff9aa2;
+    --muted: #a0d4ff;
+    --accent: #7cff7c;
+    --border: #333333;
+    --shadow-md: 4px 4px 0px 0px;
+    --shadow: 2px 2px 0px 0px;
+    --shadow-lg: 8px 8px 0px 0px;
+
+    --font-sans:
+        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    --radius: 0.5rem;
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --color-card: var(--card);
-    --color-card-foreground: var(--card-foreground);
     --color-primary: var(--primary);
-    --color-primary-foreground: var(--primary-foreground);
     --color-secondary: var(--secondary);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-destructive: var(--destructive);
-    --color-destructive-foreground: var(--destructive-foreground);
-    --color-input: var(--input);
+    --color-muted: var(--muted);
+    --color-accent: var(--accent);
+    --color-border: var(--border);
 
     --font-sans: var(--font-sans);
     --font-mono: var(--font-mono);
     --font-serif: var(--font-serif);
 
-    --shadow-2xs: var(--shadow-2xs);
-    --shadow-xs: var(--shadow-xs);
-    --shadow-sm: var(--shadow-sm);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+
     --shadow: var(--shadow);
     --shadow-md: var(--shadow-md);
     --shadow-lg: var(--shadow-lg);
-    --shadow-xl: var(--shadow-xl);
-    --shadow-2xl: var(--shadow-2xl);
 }
 
 @layer base {
@@ -75,23 +80,20 @@
     }
 
     body {
-        @apply bg-background text-foreground antialiased;
+        @apply bg-background text-foreground;
     }
 
     h1 {
         font-size: clamp(1.365rem, 0.9555rem + 2.184vw, 2.0475rem);
         line-height: 1.25;
-        color: var(--foreground);
         font-weight: bold;
     }
     h3 {
         font-size: clamp(1.02375rem, 0.9555rem + 0.364vw, 1.1375rem);
-        color: var(--foreground);
         font-weight: 700;
     }
     p {
         font-size: clamp(0.79625rem, 0.728rem + 0.364vw, 0.91rem);
-        color: var(--muted-foreground);
         font-weight: 400;
     }
 
