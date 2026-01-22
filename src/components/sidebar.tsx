@@ -1,10 +1,11 @@
-import { Button, buttonVariants } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { IconType } from "react-icons/lib";
 import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
 
 type Social = {
   link: string;
@@ -24,23 +25,27 @@ const socials: Social[] = [
     icon: FaLinkedinIn,
   },
   {
-    link: "mailto:roshan4nand@gmail.com",
+    link: "https://mail.google.com/mail/u/0/?fs=1&to=roshan4nand@gmail.com&tf=cm",
     icon: MdEmail,
   },
 ];
 
 const sideBarLinks = ["projects", "experince", "skills", "about"];
+
 const SideBar = () => {
   return (
-    <aside className="w-1/4 flex flex-col justify-between">
-      <section className="flex flex-wrap border-r-4 p-4">
+    <aside className="md:w-1/4 flex md:flex-col justify-between items-center md:items-stretch p-4 md:p-0">
+      <section className="flex flex-wrap md:border-r-4 md:p-4 ">
         {socials.map(({ link, icon: Icon }, i) => {
           return (
-            <span key={i} className="w-1/2 flex justify-center my-2">
+            <span
+              key={i}
+              className="md:w-1/2 flex gap-4 md:gap-0 justify-center md:my-2"
+            >
               <a
                 className={cn(
                   buttonVariants({ variant: "secondary" }),
-                  " w-fit ",
+                  "size-fit mx-2 md:mx-0",
                 )}
                 href={link}
                 target="_blank"
@@ -52,7 +57,8 @@ const SideBar = () => {
         })}
       </section>
 
-      <section className="flex flex-col gap-2 p-4 border-r-4">
+      <section className="flex md:flex-col gap-4 md:p-4 md:border-r-4">
+        <ThemeToggle />
         {sideBarLinks.map((link, i) => (
           <Link
             className={cn(buttonVariants({ variant: "primary" }))}
@@ -62,9 +68,6 @@ const SideBar = () => {
             {link.toUpperCase()}
           </Link>
         ))}
-        {/*
-
-        <Button variant={"primary"}>Experience</Button>*/}
       </section>
     </aside>
   );

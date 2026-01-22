@@ -14,6 +14,7 @@ export function ThemeToggle() {
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
       }}
+      variant={"primary"}
     >
       {theme == "light" ? <Moon /> : <Sun />}
     </Button>
