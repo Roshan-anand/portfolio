@@ -33,7 +33,7 @@ const Tech = () => {
         {IconPaths.map(({ name, icon: Icon }) => (
           <div
             key={name}
-            className="bg-input/30 border border-input/60 shadow-2xl rounded-sm p-[0.25rem] px-2 flex items-center gap-2"
+            className="bg-input/30 border border-input/60 shadow-2xl rounded-sm p-1 px-2 flex items-center gap-2"
           >
             <Icon className="icon-md " />
             <p>{name}</p>

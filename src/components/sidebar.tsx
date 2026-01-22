@@ -30,7 +30,6 @@ const socials: Social[] = [
 ];
 
 const sideBarLinks = ["projects", "experince", "skills", "about"];
-const hash = window.location.hash;
 const SideBar = () => {
   return (
     <aside className="w-1/4 flex flex-col justify-between">
@@ -51,7 +50,6 @@ const SideBar = () => {
             </span>
           );
         })}
-        <p>{window.location.hash}</p>
       </section>
 
       <section className="flex flex-col gap-2 p-4 border-r-4">
