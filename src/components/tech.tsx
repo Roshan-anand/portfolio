@@ -1,43 +1,41 @@
 import React from "react";
-import { FaDocker, FaGolang } from "react-icons/fa6";
-import { IconType } from "react-icons/lib";
-import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
-import { SiBun } from "react-icons/si";
+import { Card } from "./ui/card";
 
-type TechIconType = {
-  name: string;
-  icon: IconType;
+type Skills = {
+  category: "CORE" | "OTHER";
+  skills: string[];
 };
-const IconPaths: TechIconType[] = [
+
+const skills: Skills[] = [
   {
-    name: "TypeScript",
-    icon: BiLogoTypescript,
-  },
-  { name: "Golang", icon: FaGolang },
-  { name: "PSQL", icon: BiLogoPostgresql },
-  {
-    name: "Bun",
-    icon: SiBun,
+    category: "CORE",
+    skills: ["GOlang", "TypeScript", "Bun", "PSQL", "Docker"],
   },
   {
-    name: "Docker",
-    icon: FaDocker,
+    category: "OTHER",
+    skills: ["NodeJS", "Express", "React", "NextJS", "ORMs", "Linux", "Git"],
   },
 ];
 
 const Tech = () => {
   return (
-    <section id="skills" className="flex flex-col gap-2 h-full ">
-      <h3>Brain is filled with:</h3>
-      <figure className="flex flex-wrap gap-4 items-center">
-        {IconPaths.map(({ name, icon: Icon }) => (
-          <div
-            key={name}
-            className="bg-input/30 border border-input/60 shadow-2xl rounded-sm p-1 px-2 flex items-center gap-2"
-          >
-            <Icon className="icon-md " />
-            <p>{name}</p>
-          </div>
+    <section
+      id="skills"
+      className="h-full flex flex-col gap-6 justify-center items-center px-4"
+    >
+      <h1>SKILLS</h1>
+      <figure className="flex flex-col gap-6">
+        {skills.map(({ category, skills }) => (
+          <Card className="rounded-sm p-4 gap-4" key={category}>
+            <h3>{category}</h3>
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill) => (
+                <p key={skill} className="p-1 px-2 rounded-sm magic">
+                  {skill}
+                </p>
+              ))}
+            </div>
+          </Card>
         ))}
       </figure>
     </section>

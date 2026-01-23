@@ -38,6 +38,7 @@ export const Projects = () => {
       id="projects"
       className="h-full flex flex-col gap-2 justify-center items-center px-4"
     >
+      <h1>PROJECTS</h1>
       <figure className="flex flex-col flex-wrap gap-4">
         {projects.map((info, i) => (
           <ProjectBox {...info} key={i} />
@@ -57,7 +58,7 @@ const ProjectBox = ({
   return (
     <Card className="rounded-sm p-2 gap-2">
       <header className="flex gap-2 items-center">
-        <h3 className="magic p-1 w-fit">{title}</h3>
+        <h3 className="magic p-1 w-fit -rotate-1">{title}</h3>
         {repolink ? (
           <Link
             className={cn(buttonVariants({ variant: "secondary" }), "ml-auto")}
