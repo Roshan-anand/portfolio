@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import { FiSun } from "react-icons/fi";
+import { FaRegMoon } from "react-icons/fa";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,7 @@ export function ThemeToggle() {
       }}
       variant={"primary"}
     >
-      {theme == "light" ? <Moon /> : <Sun />}
+      {theme == "light" ? <FaRegMoon /> : <FiSun />}
     </Button>
   );
 }
