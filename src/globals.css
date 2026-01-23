@@ -8,6 +8,7 @@
     --secondary: #ffb3ba;
     --muted: #bae1ff;
     --accent: #98ff98;
+    --accent-foreground: #000000;
     --border: #000000;
     --shadow-md: 4px 4px 0px 0px;
     --shadow: 2px 2px 0px 0px;
@@ -28,10 +29,11 @@
 .dark {
     --background: #121212;
     --foreground: #e0e0e0;
-    --primary: #b19bff;
-    --secondary: #ff9aa2;
-    --muted: #a0d4ff;
-    --accent: #7cff7c;
+    --primary: #ffffff;
+    --secondary: #121212;
+    --muted: #121212;
+    --accent: #e0e0e0;
+    --accent-foreground: #000000;
     --border: #ffffff;
     --shadow-md: 2px 2px 0px 0px;
     --shadow: 2px 2px 0px 0px;
@@ -56,6 +58,7 @@
     --color-secondary: var(--secondary);
     --color-muted: var(--muted);
     --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
     --color-border: var(--border);
 
     --font-sans: var(--font-sans);
@@ -98,7 +101,7 @@
     }
     p {
         font-size: clamp(0.79625rem, 0.728rem + 0.364vw, 0.91rem);
-        font-weight: 400;
+        font-weight: 550;
     }
 
     .icon-lg {

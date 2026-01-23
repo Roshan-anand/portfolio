@@ -19,10 +19,11 @@ const Hero = () => {
       </div>
       <h1>ROSHAN A</h1>
 
-      <Card className="items-center ">
-        <h3 className="magic flex p-2">20 | BACKEND | CLOUD | FULLSTACK</h3>
-        {/*<h3>HIRE ME</h3>*/}
-        <p className="text-center text-balance">
+      <Card className="items-center px-2">
+        <h3 className="magic flex p-2 bg-muted rotate-1">
+          20 | BACKEND | CLOUD | FULLSTACK
+        </h3>
+        <p className="text-center text-balance font-medium">
           Available for Freelace, Contract or Full Time opportunities. Need a
           dev who is instantly productive at any codebase that you throw, feel
           free to connect.

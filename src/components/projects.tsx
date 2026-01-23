@@ -1,12 +1,15 @@
 import { Project } from "@/lib/types";
 import { FaEyeSlash, FaGithub } from "react-icons/fa";
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
-import { GoDotFill } from "react-icons/go";
+import { Card } from "./ui/card";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "./ui/button";
+import Link from "next/link";
 
 const projects: Project[] = [
   {
     title: "CODE JOIN",
-    designation: ["Fullstack"],
+    designation: ["FULLSTACK", "TS"],
     description:
       "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
     livelink: "https://codejoin.roshananand.cloud",
@@ -14,18 +17,27 @@ const projects: Project[] = [
   },
   {
     title: "SKETCHY IO",
-    designation: ["Fullstack"],
-    description:
-      "An online multiplayer drawing and guessing pictionary game",
+    designation: ["FULLSTACK", "TS"],
+    description: "An online multiplayer drawing and guessing pictionary game.",
     livelink: "https://sketchy-io.roshananand.cloud",
     repolink: "https://github.com/Roshan-anand/sketchy_io",
+  },
+  {
+    title: "comming soon",
+    designation: ["BACKEND", "GO"],
+    description:
+      "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
+    livelink: null,
+    repolink: null,
   },
 ];
 
 export const Projects = () => {
   return (
-    <section className="flex flex-col gap-2">
-      <h3> PROJECTS :</h3>
+    <section
+      id="projects"
+      className="h-full flex flex-col gap-2 justify-center items-center px-4"
+    >
       <figure className="flex flex-col flex-wrap gap-4">
         {projects.map((info, i) => (
           <ProjectBox {...info} key={i} />
@@ -43,44 +55,42 @@ const ProjectBox = ({
   repolink,
 }: Project) => {
   return (
-    <div className="bg-card rounded-md p-4 relative">
-      <div className="ml-auto flex gap-4 p-2 px-4 rounded-b-sm absolute top-0 right-5 bg-background">
+    <Card className="rounded-sm p-2 gap-2">
+      <header className="flex gap-2 items-center">
+        <h3 className="magic p-1 w-fit">{title}</h3>
         {repolink ? (
-          <a
+          <Link
+            className={cn(buttonVariants({ variant: "secondary" }), "ml-auto")}
             href={repolink}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-110"
           >
             <FaGithub className="icon-md text-muted-foreground" />
-          </a>
+          </Link>
         ) : (
-          <FaEyeSlash />
+          <span
+            className={cn(buttonVariants({ variant: "secondary" }), "ml-auto")}
+          >
+            <FaEyeSlash className="ml-auto" />
+          </span>
         )}
         {livelink && (
-          <a
+          <Link
             href={livelink}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md hover:scale-110 bg-muted-foreground text-primary-foreground"
+            className={cn(buttonVariants({ variant: "secondary" }))}
           >
             <LiaExternalLinkAltSolid className="icon-md " />
-          </a>
+          </Link>
         )}
-      </div>
-      <div className="absolute top-[10%] left-0 bg-background w-2 h-1/4  rounded-[2px]"></div>
-      <header className="flex items-center gap-2">
-        <h2>{title}</h2>
-        {designation.map((item, index) => (
-          <span key={index} className="flex items-center gap-2">
-            <GoDotFill className="icon-sm text-background" />
-            <p className="text-secondary">
-              {item}
-            </p>
-          </span>
-        ))}
       </header>
-      <p className="text-muted-foreground mt-3">{description}</p>
-    </div>
+
+      <p className="flex gap-3 bg-accent text-accent-foreground px-2">
+        {designation.join(" - ")}
+      </p>
+
+      <p className="px-2">{description}</p>
+    </Card>
   );
 };

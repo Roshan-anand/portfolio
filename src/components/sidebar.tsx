@@ -42,7 +42,7 @@ const SideBar = () => {
               key={i}
               className="md:w-1/2 flex gap-4 md:gap-0 justify-center md:my-2"
             >
-              <a
+              <Link
                 className={cn(
                   buttonVariants({ variant: "secondary" }),
                   "size-fit mx-2 md:mx-0",
@@ -51,7 +51,7 @@ const SideBar = () => {
                 target="_blank"
               >
                 <Icon className="icon-lg" />
-              </a>
+              </Link>
             </span>
           );
         })}
