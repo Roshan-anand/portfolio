@@ -95,6 +95,14 @@
         @apply border-2 shadow-md;
     }
 
+    .hide-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+
     h1 {
         font-size: clamp(1.365rem, 0.9555rem + 2.184vw, 2.0475rem);
         line-height: 1.25;
