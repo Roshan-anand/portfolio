@@ -8,6 +8,13 @@ import Link from "next/link";
 
 const projects: Project[] = [
   {
+    title: "SKETCHY IO",
+    designation: ["FULLSTACK", "TS"],
+    description: "An online multiplayer drawing and guessing pictionary game.",
+    livelink: "https://sketchy-io.roshananand.cloud",
+    repolink: "https://github.com/Roshan-anand/sketchy_io",
+  },
+  {
     title: "CODE JOIN",
     designation: ["FULLSTACK", "TS"],
     description:
@@ -16,19 +23,12 @@ const projects: Project[] = [
     repolink: "https://github.com/Roshan-anand/code-join",
   },
   {
-    title: "SKETCHY IO",
-    designation: ["FULLSTACK", "TS"],
-    description: "An online multiplayer drawing and guessing pictionary game.",
-    livelink: "https://sketchy-io.roshananand.cloud",
-    repolink: "https://github.com/Roshan-anand/sketchy_io",
-  },
-  {
     title: "comming soon",
-    designation: ["BACKEND", "GO"],
+    designation: ["FULLSTACK", "GO", "VUE"],
     description:
       "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
     livelink: null,
-    repolink: null,
+    repolink: "https://github.com/Roshan-anand/godploy",
   },
 ];
 

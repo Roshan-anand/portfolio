@@ -30,7 +30,7 @@ const socials: Social[] = [
   },
 ];
 
-const sideBarLinks = ["projects", "experince", "skills", "about"];
+const sideBarLinks = ["projects", "skills", "about"];
 
 const SideBar = () => {
   return (

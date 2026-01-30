@@ -9,11 +9,20 @@ type Skills = {
 const skills: Skills[] = [
   {
     category: "CORE",
-    skills: ["GOlang", "TypeScript", "Bun", "PSQL", "Docker"],
+    skills: ["GOlang", "TypeScript", "SQL", "Docker"],
   },
   {
     category: "OTHER",
-    skills: ["NodeJS", "Express", "React", "NextJS", "ORMs", "Linux", "Git"],
+    skills: [
+      "BunJS",
+      "NodeJS",
+      "Express",
+      "React",
+      "NextJS",
+      "ORMs",
+      "Linux",
+      "Git",
+    ],
   },
 ];
 
