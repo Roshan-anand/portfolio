@@ -61,7 +61,8 @@ const SideBar = () => {
         <ThemeToggle />
         {sideBarLinks.map((link, i) => (
           <Link
-            className={cn(buttonVariants({ variant: "primary" }))}
+            className={cn(buttonVariants({ variant: "primary" }),
+              "font-bold")}
             href={`#${link}`}
             key={i}
           >

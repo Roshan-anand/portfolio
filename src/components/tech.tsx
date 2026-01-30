@@ -1,28 +1,35 @@
-import React from "react";
 import { Card } from "./ui/card";
+import { IconType } from "react-icons";
+import { FaTools } from "react-icons/fa";
+import { PiStackFill } from "react-icons/pi";
+import { FaCode } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
 
 type Skills = {
-  category: "CORE" | "OTHER";
+  category: string;
   skills: string[];
+  icon: IconType;
+  bg: string;
 };
 
 const skills: Skills[] = [
   {
     category: "CORE",
-    skills: ["GOlang", "TypeScript", "SQL", "Docker"],
+    skills: ["GOlang", "TypeScript", "SQL"],
+    icon: FaCode,
+    bg: "bg-primary",
   },
   {
-    category: "OTHER",
-    skills: [
-      "BunJS",
-      "NodeJS",
-      "Express",
-      "React",
-      "NextJS",
-      "ORMs",
-      "Linux",
-      "Git",
-    ],
+    category: "META",
+    skills: ["BunJS", "NodeJS", "Express", "React", "NextJS", "SQLite", "PSQL"],
+    icon: PiStackFill,
+    bg: "bg-secondary",
+  },
+  {
+    category: "DEV",
+    skills: ["Linux", "Git", "Docker"],
+    icon: FaTools,
+    bg: "bg-muted",
   },
 ];
 
@@ -34,12 +41,15 @@ const Tech = () => {
     >
       <h1>SKILLS</h1>
       <figure className="flex flex-col gap-6">
-        {skills.map(({ category, skills }) => (
+        {skills.map(({ category, skills, icon: Icon, bg }) => (
           <Card className="rounded-sm p-4 gap-4" key={category}>
-            <h3>{category}</h3>
+            <h3 className="flex items-center gap-2">
+              <Icon />
+              <span>{category}</span>
+            </h3>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
-                <p key={skill} className="p-1 px-2 rounded-sm magic">
+                <p key={skill} className={cn("p-1 px-2 rounded-sm magic font-bold", bg)}>
                   {skill}
                 </p>
               ))}
