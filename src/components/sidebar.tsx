@@ -17,7 +17,7 @@ const socials: Social[] = [
     icon: FaGithub,
   },
   {
-    link: "https://twitter.com/roshan4nand",
+    link: "https://x.com/R0SHAN_ANAND",
     icon: FaXTwitter,
   },
   {

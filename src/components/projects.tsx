@@ -8,6 +8,14 @@ import Link from "next/link";
 
 const projects: Project[] = [
   {
+    title: "comming soon",
+    designation: ["FULLSTACK", "GO", "VUE"],
+    description:
+      "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
+    livelink: null,
+    repolink: "https://github.com/Roshan-anand/godploy",
+  },
+  {
     title: "SKETCHY IO",
     designation: ["FULLSTACK", "TS"],
     description: "An online multiplayer drawing and guessing pictionary game.",
@@ -21,14 +29,6 @@ const projects: Project[] = [
       "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
     livelink: "https://codejoin.roshananand.cloud",
     repolink: "https://github.com/Roshan-anand/code-join",
-  },
-  {
-    title: "comming soon",
-    designation: ["FULLSTACK", "GO", "VUE"],
-    description:
-      "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
-    livelink: null,
-    repolink: "https://github.com/Roshan-anand/godploy",
   },
 ];
 
