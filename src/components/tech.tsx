@@ -1,4 +1,4 @@
-import { Card } from "./ui/card";
+import { Card, CardContent, CardTitle } from "./ui/card";
 import { IconType } from "react-icons";
 import { FaTools } from "react-icons/fa";
 import { PiStackFill } from "react-icons/pi";
@@ -21,44 +21,48 @@ const skills: Skills[] = [
   },
   {
     category: "META",
-    skills: ["BunJS", "NodeJS", "Express", "React", "NextJS", "SQLite", "PSQL"],
+    skills: ["MERN", "SQLite", "PSQL"],
     icon: PiStackFill,
     bg: "bg-secondary",
   },
   {
     category: "DEV",
-    skills: ["Linux", "Git", "Docker"],
+    skills: ["Linux", "Git", "Docker","Traefik"],
     icon: FaTools,
     bg: "bg-muted",
   },
 ];
 
-const Tech = () => {
+const Tech = ({ className }: React.ComponentProps<"div">) => {
   return (
-    <section
-      id="skills"
-      className="h-full flex flex-col gap-6 justify-center items-center px-4"
+    <Card
+      className={cn(
+        "px-1 flex flex-col items-center justify-between",
+        className,
+      )}
     >
-      <h1>SKILLS</h1>
-      <figure className="flex flex-col gap-6">
+      <CardTitle className="flex gap-2">
+        <FaCode className="icon-lg" />
+        <h1>SKILLS</h1>
+      </CardTitle>
+      <CardContent className="p-1">
         {skills.map(({ category, skills, icon: Icon, bg }) => (
-          <Card className="rounded-sm p-4 gap-4" key={category}>
-            <h3 className="flex items-center gap-2">
+          <figure className="flex flex-col gap-2 my-6" key={category}>
+            <h3 className="flex items-center gap-2 ">
               <Icon />
-              <span>{category}</span>
+              <span>{category} :</span>
             </h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 p-1">
               {skills.map((skill) => (
-                <p key={skill} className={cn("p-1 px-2 rounded-sm magic font-bold", bg)}>
+                <p key={skill} className={cn("px-1 rounded-sm magic", bg)}>
                   {skill}
                 </p>
               ))}
             </div>
-          </Card>
+          </figure>
         ))}
-      </figure>
-    </section>
+      </CardContent>
+    </Card>
   );
 };
-
 export default Tech;

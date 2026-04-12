@@ -1,17 +1,13 @@
 import Hero from "@/components/hero";
-import { Projects } from "@/components/projects";
-import SideBar from "@/components/sidebar";
+import Social from "@/components/Socila";
 import Tech from "@/components/tech";
 
 const page = () => {
   return (
-    <main className="w-[95%] max-w-200 h-screen mx-auto p-2 flex flex-col md:flex-row ">
-      <SideBar />
-      <section className="flex-1 h-full overflow-y-auto p-4 hide-scrollbar">
-        <Projects />
-        <Tech />
-        <Hero />
-      </section>
+    <main className="w-[95%] max-w-250 h-screen mx-auto p-2 grid grid-cols-12 grid-rows-12 gap-6">
+      <Tech className="col-span-3 row-span-7"/>
+      <Hero className="col-span-6 row-span-4"/>
+      <Social className="col-span-3 row-span-3"/>
     </main>
   );
 };

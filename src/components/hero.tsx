@@ -1,44 +1,38 @@
-import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { Card } from "./ui/card";
-import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
+import Image from "next/image";
+import { BsDot } from "react-icons/bs";
+import { CiLocationOn } from "react-icons/ci";
 
-const Hero = () => {
+const Hero = ({ className }: React.ComponentProps<"div">) => {
   return (
-    <section
+    <Card
       id="about"
-      className="h-full flex flex-col gap-2 justify-center items-center px-4"
+      className={cn("h-full flex flex-col justify-between p-3", className)}
     >
-      <div className="magic rounded-full overflow-hidden">
-        <Image
-          src="/profile-big.png"
-          alt="profile"
-          width="100"
-          height="100"
-          className="size-full"
-        />
+      <div className="flex gap-2 items-end">
+        <div className="magic rounded-md overflow-hidden">
+          <Image
+            src="/profile-big.png"
+            alt="profile"
+            width="100"
+            height="100"
+            className="size-full"
+          />
+        </div>
+        <h1 className="flex flex-col">
+          <span>ROSHAN</span>
+          <span className="ml-3">ANAND</span>
+        </h1>
+        <div className="h-full flex-1 flex justify-end items-start">
+          <ThemeToggle />
+        </div>
       </div>
-      <h1>ROSHAN A</h1>
-
-      <Card className="items-center px-2">
-        <h3 className="magic flex p-2 bg-muted rotate-1">
-          20 | BACKEND | CLOUD | FULLSTACK
-        </h3>
-        <p className="text-center text-balance font-medium">
-          Available for Freelace, Contract or Full Time opportunities. Need a
-          dev who is instantly productive at any codebase that you throw, feel
-          free to connect.
-        </p>
-        <Link
-          href={
-            "https://mail.google.com/mail/u/0/?fs=1&to=roshan4nand@gmail.com&tf=cm"
-          }
-          className="underline underline-offset-1 font-semibold"
-        >
-          roshan4nand@gmail
-        </Link>
-      </Card>
-    </section>
+      <h3 className="magic text-center p-2 bg-muted ">
+        20yrs | BACKEND | CLOUD | FULLSTACK
+      </h3>
+    </Card>
   );
 };
-
 export default Hero;
