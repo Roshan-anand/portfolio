@@ -27,7 +27,7 @@ const skills: Skills[] = [
   },
   {
     category: "DEV",
-    skills: ["Linux", "Git", "Docker","Traefik"],
+    skills: ["Linux", "Git", "Docker", "Traefik"],
     icon: FaTools,
     bg: "bg-muted",
   },
@@ -45,9 +45,9 @@ const Tech = ({ className }: React.ComponentProps<"div">) => {
         <FaCode className="icon-lg" />
         <h1>SKILLS</h1>
       </CardTitle>
-      <CardContent className="p-1">
+      <CardContent className="p-1 flex flex-wrap justify-center md:block">
         {skills.map(({ category, skills, icon: Icon, bg }) => (
-          <figure className="flex flex-col gap-2 my-6" key={category}>
+          <figure className="flex flex-col gap-2 my-5 w-[45%] md:w-full" key={category}>
             <h3 className="flex items-center gap-2 ">
               <Icon />
               <span>{category} :</span>

@@ -41,17 +41,17 @@ const Social = ({ className }: ComponentProps<"div">) => {
   return (
     <Card
       className={cn(
-        "border-0 shadow-none flex justify-center items-center flex-row flex-wrap p-0 gap-0",
+        "border-0 shadow-none flex justify-around md:justify-center items-center flex-row flex-wrap p-0 gap-0",
         className,
       )}
     >
-      <h1 className="flex flex-col flex- w-1/3 h-1/2 justify-center items-center">
+      <h1 className="hidden md:flex flex-col flex- w-1/3 h-1/2 justify-center items-center">
         <span>LIN</span>
         <span>KS.</span>
       </h1>
       {socials.map(({ link, icon: Icon }, i) => {
         return (
-          <span key={i} className="flex w-1/3 h-1/2 justify-center items-center ">
+          <span key={i} className="flex w-14 md:w-1/3 md:h-1/2 justify-center items-center">
           <Link
             key={i}
             className={cn(

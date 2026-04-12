@@ -5,60 +5,20 @@ import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 import Link from "next/link";
+import { ComponentProps } from "react";
 
-const projects: Project[] = [
-  {
-    title: "comming soon",
-    designation: ["FULLSTACK", "GO", "VUE"],
-    description:
-      "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
-    livelink: null,
-    repolink: "https://github.com/Roshan-anand/godploy",
-  },
-  {
-    title: "SKETCHY IO",
-    designation: ["FULLSTACK", "TS"],
-    description: "An online multiplayer drawing and guessing pictionary game.",
-    livelink: "https://sketchy-io.roshananand.cloud",
-    repolink: "https://github.com/Roshan-anand/sketchy_io",
-  },
-  {
-    title: "CODE JOIN",
-    designation: ["FULLSTACK", "TS"],
-    description:
-      "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
-    livelink: "https://codejoin.roshananand.cloud",
-    repolink: "https://github.com/Roshan-anand/code-join",
-  },
-];
-
-export const Projects = () => {
-  return (
-    <section
-      id="projects"
-      className="h-full flex flex-col gap-2 justify-center items-center px-4"
-    >
-      <h1>PROJECTS</h1>
-      <figure className="flex flex-col flex-wrap gap-4">
-        {projects.map((info, i) => (
-          <ProjectBox {...info} key={i} />
-        ))}
-      </figure>
-    </section>
-  );
-};
-
-const ProjectBox = ({
+export const ProjectBox = ({
   title,
   description,
   designation,
   livelink,
   repolink,
-}: Project) => {
+  className,
+}: Project & ComponentProps<"div">) => {
   return (
-    <Card className="rounded-sm p-2 gap-2">
+    <Card className={cn("p-4 md:p-2 gap-2", className)}>
       <header className="flex gap-2 items-center">
-        <h3 className="magic p-1 w-fit -rotate-1">{title}</h3>
+        <h3 className="magic rounded-md p-1 w-fit -rotate-1">{title}</h3>
         {repolink ? (
           <Link
             className={cn(buttonVariants({ variant: "secondary" }), "ml-auto")}
