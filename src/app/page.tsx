@@ -1,4 +1,5 @@
 import Hero from "@/components/hero";
+import ModeToggle from "@/components/mode";
 import { ProjectBox } from "@/components/projects";
 import Social from "@/components/Socila";
 import Tech from "@/components/tech";
@@ -32,22 +33,23 @@ const codeJoinProject: Project = {
 
 const page = () => {
   return (
-    <main className="w-[95%] max-w-250 h-screen mx-auto p-2 flex flex-col md:grid grid-cols-12 grid-rows-12  gap-6">
-      <Hero className="col-span-6 row-span-4 row-start-3" />
-      <Social className="col-span-3 row-span-3 row-start-3" />
+    <main className="wave-bg rounded-t-2xl w-[95%] max-w-250 h-[95vh] my-auto mx-auto p-2 flex flex-col md:grid grid-cols-12 grid-rows-12  gap-6">
+      <Hero className="col-span-5 row-span-3 row-start-2" />
+      <Social className="col-span-4 row-span-3 col-start-9 row-start-3" />
+      <ModeToggle className="col-span-3 row-span-1 row-start-8 col-start-1" />
       <ProjectBox
         {...godployProject}
-        className="col-span-3 row-span-3 justify-around"
+        className="col-span-4 row-span-3 col-start-9 justify-around"
       />
       <ProjectBox
         {...sketchyProject}
-        className="col-span-5 row-span-2 col-start-5 justify-around"
+        className="col-span-5 row-span-2 row-start-5 justify-around"
       />
       <ProjectBox
         {...codeJoinProject}
-        className="col-span-8 row-span-2 col-start-5 justify-around"
+        className="col-span-5 row-span-2 col-start-4 justify-around"
       />
-      <Tech className="col-span-3 row-span-6 row-start-3 col-start-1" />
+      <Tech className="col-span-3 row-span-7 row-start-1 col-start-1" />
     </main>
   );
 };

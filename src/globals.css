@@ -91,6 +91,13 @@
         -webkit-overflow-scrolling: touch;
     }
 
+    .wave-bg {
+        @media (width >= 48rem /* 768px */) {
+            background-image: url("/wave-bg.svg");
+            background-repeat: no-repeat;
+        }
+    }
+
     .magic {
         @apply border-2 shadow-md;
     }

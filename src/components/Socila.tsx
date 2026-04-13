@@ -41,7 +41,7 @@ const Social = ({ className }: ComponentProps<"div">) => {
   return (
     <Card
       className={cn(
-        "border-0 shadow-none flex justify-around md:justify-center items-center flex-row flex-wrap p-0 gap-0",
+        "border-0 bg-transparent shadow-none flex justify-around md:justify-center items-center flex-row flex-wrap p-0 px-6 gap-0",
         className,
       )}
     >
