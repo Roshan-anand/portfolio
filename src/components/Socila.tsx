@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 import { Card } from "./ui/card";
 import { buttonVariants } from "./ui/button";
-import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
+import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { cn } from "@/lib/utils";
@@ -32,8 +32,8 @@ const socials: Social[] = [
     icon: SiPeerlist,
   },
   {
-    link: "https://www.linkedin.com/in/roshan-anand-a92b1a23a/",
-    icon: FaLinkedinIn,
+    link: "https://discordapp.com/users/1114575128190271530",
+    icon: FaDiscord,
   },
 ];
 
@@ -51,19 +51,22 @@ const Social = ({ className }: ComponentProps<"div">) => {
       </h1>
       {socials.map(({ link, icon: Icon }, i) => {
         return (
-          <span key={i} className="flex w-14 md:w-1/3 md:h-1/2 justify-center items-center">
-          <Link
+          <span
             key={i}
-            className={cn(
-              buttonVariants({ variant: "secondary" }),
-              "w-[90%]",
-            )}
-            href={link}
-            target="_blank"
+            className="flex w-14 md:w-1/3 md:h-1/2 justify-center items-center"
           >
-            <Icon className="size-full" />
-          </Link>
-           </span>
+            <Link
+              key={i}
+              className={cn(
+                buttonVariants({ variant: "secondary" }),
+                "w-[90%]",
+              )}
+              href={link}
+              target="_blank"
+            >
+              <Icon className="size-full" />
+            </Link>
+          </span>
         );
       })}
     </Card>
