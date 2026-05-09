@@ -2,12 +2,12 @@ FROM node:24-alpine AS builder
 
 WORKDIR /client
 
-RUN npm install -g pnpm 
+RUN npm install -g bun
 
 COPY package.json ./
-COPY pnpm-lock.yaml ./
+COPY bun.lock ./
 
-RUN pnpm install --frozen-lockfile
+RUN bun install --frozen-lockfile
 
 COPY public ./public
 COPY src ./src
@@ -17,7 +17,7 @@ COPY next.config.ts ./
 COPY postcss.config.mjs ./
 COPY tsconfig.json ./
 
-RUN pnpm build
+RUN bun run build
 
 FROM nginx:alpine
 
