@@ -5,8 +5,8 @@ import { Card } from "./ui/card";
 
 const ModeToggle = ({ className }: ComponentProps<"section">) => {
   return (
-    <div className={cn("flex flex-row justify-around items-center gap-2 py-2", className)}>
-      <ThemeToggle />
+    <div className={cn("flex flex-row justify-around items-center gap-2 py-1", className)}>
+      <ThemeToggle className="md:w-[25%] h-full" />
       <Card className="p-0 flex-1 rounded-md h-full flex justify-center">
         <h3 className="flex justify-around items-center py-1">
           <span>&#3205;</span>

@@ -6,8 +6,9 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-export function ThemeToggle() {
+export function ThemeToggle({ className }: React.ComponentProps<"button">) {
   const { setTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -29,9 +30,9 @@ export function ThemeToggle() {
         setTheme(theme === "light" ? "dark" : "light");
       }}
       variant={"primary"}
-      className="h-full"
+      className={cn("", className)}
     >
-      {theme === "light" ? <FaRegMoon /> : <FiSun />}
+      {theme === "light" ? <FaRegMoon className=""/> : <FiSun className="w-full" />}
     </Button>
   );
 }

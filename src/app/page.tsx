@@ -33,13 +33,13 @@ const codeJoinProject: Project = {
 
 const page = () => {
   return (
-    <main className="wave-bg rounded-t-2xl w-[95%] max-w-250 h-[95vh] min-h-270 my-auto mx-auto p-2 flex flex-col md:grid grid-cols-12 grid-rows-12 *:m-3">
+    <main className="wave-bg rounded-t-2xl w-[95vw] max-w-250 h-[95vh] min-h-270 mx-auto my-5 md:my-10 p-2 flex flex-col md:grid grid-cols-12 grid-rows-12 *:m-3">
       <Hero className="col-span-5 row-span-3 row-start-2" />
       <Social className="col-span-4 row-span-3 col-start-9 row-start-3" />
-      <ModeToggle className="col-span-3 row-span-1 row-start-7 col-start-1" />
+      <ModeToggle className="col-span-4 row-span-1 row-start-8 col-start-9" />
       <ProjectBox
         {...godployProject}
-        className="col-span-4 row-span-3 col-start-9 justify-around"
+        className="col-span-4 row-span-2 row-start-6 col-start-9 justify-around"
       />
       <ProjectBox
         {...sketchyProject}
