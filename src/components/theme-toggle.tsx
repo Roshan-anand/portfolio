@@ -29,8 +29,9 @@ export function ThemeToggle() {
         setTheme(theme === "light" ? "dark" : "light");
       }}
       variant={"primary"}
+      className="h-full"
     >
-      <div>{theme === "light" ? <FaRegMoon /> : <FiSun />}</div>
+      {theme === "light" ? <FaRegMoon /> : <FiSun />}
     </Button>
   );
 }
