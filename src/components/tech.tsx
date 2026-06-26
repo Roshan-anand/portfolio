@@ -21,13 +21,13 @@ const skills: Skills[] = [
   },
   {
     category: "META",
-    skills: ["MERN", "SQLite", "PSQL"],
+    skills: ["PERN","Svelte", "SQLite", "PSQL"],
     icon: PiStackFill,
     bg: "bg-secondary",
   },
   {
     category: "DEV",
-    skills: ["Linux", "Git", "Docker", "Traefik"],
+    skills: ["Linux", "Git", "Docker", "Traefik","AWS-EC2", "Cloudflare"],
     icon: FaTools,
     bg: "bg-muted",
   },
