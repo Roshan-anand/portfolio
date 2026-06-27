@@ -21,13 +21,13 @@ const skills: Skills[] = [
   },
   {
     category: "META",
-    skills: ["PERN","Svelte", "SQLite", "PSQL"],
+    skills: ["PERN", "Svelte", "SQLite", "PSQL"],
     icon: PiStackFill,
     bg: "bg-secondary",
   },
   {
     category: "DEV",
-    skills: ["Linux", "Git", "Docker", "Traefik","AWS-EC2", "Cloudflare"],
+    skills: ["Linux", "Git", "Docker", "Traefik", "AWS-EC2"],
     icon: FaTools,
     bg: "bg-muted",
   },
@@ -47,7 +47,10 @@ const Tech = ({ className }: React.ComponentProps<"div">) => {
       </CardTitle>
       <CardContent className="p-1 flex flex-wrap justify-center md:block">
         {skills.map(({ category, skills, icon: Icon, bg }) => (
-          <figure className="flex flex-col gap-2 my-5 w-[45%] md:w-full" key={category}>
+          <figure
+            className="flex flex-col gap-2 my-5 w-[45%] md:w-full"
+            key={category}
+          >
             <h3 className="flex items-center gap-2 ">
               <Icon />
               <span>{category} :</span>
