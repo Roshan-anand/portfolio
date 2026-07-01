@@ -2,135 +2,153 @@
 @import "tw-animate-css";
 
 :root {
-    --background: #fdfbf7;
-    --foreground: #1a1a1a;
-    --primary: #c4b0ff;
-    --secondary: #ffb3ba;
-    --muted: #bae1ff;
-    --accent: #98ff98;
-    --accent-foreground: #000000;
-    --border: #000000;
-    --card: #ffffff;
-    --shadow-md: 4px 4px 0px 0px;
-    --shadow: 2px 2px 0px 0px;
-    --shadow-lg: 8px 8px 0px 0px;
+  --background: #0d0d0d;
+  --secondary-background: #101010;
+  --secondary-background-elevated: #1a1a1a;
+  --secondary-background-hover: #282828;
+  --secondary-background-selected: #232323;
+  --secondary-background-active: #393939;
 
-    --font-sans:
-        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
-    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --font-mono:
-        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-    --radius: 0.5rem;
-}
+  --foreground: #ffffff;
+  --muted-foreground: #a0a0a0;
+  --subtle-foreground: #7e7e7e;
+  --dim-foreground: #505050;
 
-.dark {
-    --background: #121212;
-    --foreground: #e0e0e0;
-    --primary: #121212;
-    --secondary: #121212;
-    --muted: #121212;
-    --accent: #e0e0e0;
-    --accent-foreground: #000000;
-    --border: #ffffff;
-    --card: #121212;
-    --shadow-md: 2px 2px 0px 0px;
-    --shadow: 2px 2px 0px 0px;
-    --shadow-lg: 2px 2px 0px 0px;
+  --border: #101010;
+  --border-focus: #ffc799;
 
-    --font-sans:
-        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
-    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --font-mono:
-        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-    --radius: 0.5rem;
+  --accent: #ffc799;
+  --accent-hover: #ffcfa8;
+  --accent-soft: #ffc7993d;
+  --accent-dark: #612a0f;
+
+  --accent-purple: #faacfe;
+  --accent-orange: #f6c094;
+  --accent-blue: #aca1cf;
+  --accent-green: #90b99f;
+  --accent-yellow: #e6b99d;
+  --accent-magenta: #e29eca;
+  --accent-magenta-light: #ecaad6;
+  --accent-pink: #ea83a5;
+  --accent-pink-light: #f591b2;
+
+  --scrollbar: #343434;
+  --scrollbar-alpha: #34343480;
+
+  --success: #99ffe4;
+  --success-soft: #99ffe43d;
+  --danger: #ff8080;
+  --danger-soft: #ff80803d;
+
+  /* Purple */
+  --color-purple: #faacfe;
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --radius: 0.5rem;
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-primary: var(--primary);
-    --color-secondary: var(--secondary);
-    --color-muted: var(--muted);
-    --color-accent: var(--accent);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-border: var(--border);
-    --color-card: var(--card);
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-secondary-background-elevated: var(--secondary-background-elevated);
+  --color-secondary-background-hover: var(--secondary-background-hover);
+  --color-secondary-background-selected: var(--secondary-background-selected);
+  --color-secondary-background-active: var(--secondary-background-active);
 
-    --font-sans: var(--font-sans);
-    --font-mono: var(--font-mono);
-    --font-serif: var(--font-serif);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle-foreground: var(--subtle-foreground);
+  --color-dim-foreground: var(--dim-foreground);
 
-    --radius-sm: calc(var(--radius) - 4px);
-    --radius-md: calc(var(--radius) - 2px);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) + 4px);
+  --color-border: var(--border);
+  --color-border-focus: var(--border-focus);
 
-    --shadow: var(--shadow);
-    --shadow-md: var(--shadow-md);
-    --shadow-lg: var(--shadow-lg);
+  /* accents */
+
+  --color-accent: #ffc799;
+  --color-accent-hover: #ffcfa8;
+  --color-accent-soft: #ffc7993d;
+  --color-accent-dark: #612a0f;
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-green: var(--accent-green);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-magenta: var(--accent-magenta);
+  --color-accent-magenta-light: var(--accent-magenta-light);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-pink-light: var(--accent-pink-light);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  /* scrollbars */
+  --color-scrollbar: var(--scrollbar);
+  --color-scrollbar-alpha: var(--scrollbar-alpha);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 @layer base {
-    *,
-    *::after,
-    *::before {
-        @apply p-0 m-0 box-border;
-    }
+  *,
+  *::after,
+  *::before {
+    @apply p-0 m-0 box-border;
+  }
 
-    body {
-        @apply bg-background text-foreground;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-    }
+  body {
+    @apply bg-background;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    width: 100vw;
+  }
 
-    .wave-bg {
-        @media (width >= 48rem /* 768px */) {
-            background-image: url("/wave-bg.svg");
-            background-repeat: no-repeat;
-        }
-    }
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
-    .magic {
-        @apply border-2 shadow-md;
-    }
+  h1 {
+    font-size: clamp(1.365rem, 0.9555rem + 2.184vw, 2.0475rem);
+    line-height: 1.25;
+    font-weight: bold;
+  }
 
-    .hide-scrollbar {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
-    .hide-scrollbar::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }
+  h3 {
+    font-size: clamp(1.02375rem, 0.9555rem + 0.364vw, 1.1375rem);
+    font-weight: 700;
+  }
 
-    h1 {
-        font-size: clamp(1.365rem, 0.9555rem + 2.184vw, 2.0475rem);
-        line-height: 1.25;
-        font-weight: bold;
-    }
-    h3 {
-        font-size: clamp(1.02375rem, 0.9555rem + 0.364vw, 1.1375rem);
-        font-weight: 700;
-    }
-    p {
-        font-size: clamp(0.79625rem, 0.728rem + 0.364vw, 0.91rem);
-        font-weight: 550;
-    }
+  p {
+    font-size: clamp(0.79625rem, 0.728rem + 0.364vw, 0.91rem);
+    font-weight: 550;
+  }
 
-    .icon-lg {
-        @apply w-[clamp(1.656rem,3.312vw,2.366rem)] h-[clamp(1.656rem,3.312vw,2.366rem)];
-    }
-    .icon-md {
-        @apply w-[clamp(1.183rem,2.366vw,1.656rem)] h-[clamp(1.183rem,2.366vw,1.656rem)];
-    }
-    .icon-sm {
-        @apply w-[clamp(0.828rem,1.656vw,1.183rem)] h-[clamp(0.828rem,1.656vw,1.183rem)];
-    }
+  .icon-lg {
+    @apply w-[clamp(1.656rem,3.312vw,2.366rem)] h-[clamp(1.656rem,3.312vw,2.366rem)];
+  }
+  .icon-md {
+    @apply w-[clamp(1.183rem,2.366vw,1.656rem)] h-[clamp(1.183rem,2.366vw,1.656rem)];
+  }
+  .icon-sm {
+    @apply w-[clamp(0.828rem,1.656vw,1.183rem)] h-[clamp(0.828rem,1.656vw,1.183rem)];
+  }
 }

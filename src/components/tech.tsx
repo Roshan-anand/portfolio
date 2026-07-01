@@ -1,71 +1,38 @@
-import { Card, CardContent, CardTitle } from "./ui/card";
-import { IconType } from "react-icons";
-import { FaTools } from "react-icons/fa";
-import { PiStackFill } from "react-icons/pi";
-import { FaCode } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
+import type React from "react";
 
-type Skills = {
-  category: string;
-  skills: string[];
-  icon: IconType;
-  bg: string;
-};
-
-const skills: Skills[] = [
-  {
-    category: "CORE",
-    skills: ["GOlang", "TypeScript", "SQL"],
-    icon: FaCode,
-    bg: "bg-primary",
-  },
-  {
-    category: "META",
-    skills: ["PERN", "Svelte", "SQLite", "PSQL"],
-    icon: PiStackFill,
-    bg: "bg-secondary",
-  },
-  {
-    category: "DEV",
-    skills: ["Linux", "Git", "Docker", "Traefik", "AWS-EC2"],
-    icon: FaTools,
-    bg: "bg-muted",
-  },
+const skills: string[] = [
+  "GOlang",
+  "TypeScript",
+  "SQLite",
+  "PSQL",
+  "Svelte",
+  "NodeJS",
+  "Docker",
+  "Traefik",
+  "Linux",
+  "Git",
+  "AWS-EC2",
+  "React",
 ];
 
 const Tech = ({ className }: React.ComponentProps<"div">) => {
   return (
-    <Card
+    <section
       className={cn(
-        "px-1 flex flex-col items-center justify-between",
+        "flex flex-row justify-center gap-2 flex-wrap mx-auto max-w-170",
         className,
       )}
     >
-      <CardTitle className="flex gap-2">
-        <FaCode className="icon-lg" />
-        <h1>SKILLS</h1>
-      </CardTitle>
-      <CardContent className="p-1 flex flex-wrap justify-center md:block">
-        {skills.map(({ category, skills, icon: Icon, bg }) => (
-          <figure
-            className="flex flex-col gap-2 my-5 w-[45%] md:w-full"
-            key={category}
-          >
-            <h3 className="flex items-center gap-2 ">
-              <Icon />
-              <span>{category} :</span>
-            </h3>
-            <div className="flex flex-wrap gap-3 p-1">
-              {skills.map((skill) => (
-                <p key={skill} className={cn("px-1 rounded-sm magic", bg)}>
-                  {skill}
-                </p>
-              ))}
-            </div>
-          </figure>
-        ))}
-      </CardContent>
-    </Card>
+      {skills.map((name) => (
+        <h3
+          key={name}
+          className="border border-subtle-foreground/80 rounded-sm px-2.5 py-0.5 text-subtle-foreground transition-colors duration-200 hover:text-accent-orange hover:border-accent-orange/50"
+        >
+          {name}
+        </h3>
+      ))}
+    </section>
   );
 };
 export default Tech;

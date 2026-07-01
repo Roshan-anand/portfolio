@@ -10,11 +10,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         none: "",
-        primary:
-          "border-2 shadow-md hover:translate-[-2px] hover:shadow-lg ",
+        primary: "border-2 shadow-md hover:translate-[-2px] hover:shadow-lg ",
         active: "border-2 bg-muted translate-[-2px] shadow-[5px_5px]",
-        secondary:
-          "border-2 shadow hover:translate-[-2px] hover:shadow-md",
+        secondary: "border-2 shadow hover:translate-[-2px] hover:shadow-md",
       },
     },
     defaultVariants: {

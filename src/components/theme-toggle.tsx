@@ -32,7 +32,7 @@ export function ThemeToggle({ className }: React.ComponentProps<"button">) {
       variant={"primary"}
       className={cn("", className)}
     >
-      {theme === "light" ? <FaRegMoon className=""/> : <FiSun className="w-full" />}
+      {theme === "light" ? <FaRegMoon className="" /> : <FiSun className="w-full" />}
     </Button>
   );
 }

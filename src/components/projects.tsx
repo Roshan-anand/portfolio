@@ -1,57 +1,75 @@
-import { Project } from "@/lib/types";
-import { FaEyeSlash, FaGithub } from "react-icons/fa";
-import { LiaExternalLinkAltSolid } from "react-icons/lia";
-import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/button";
-import Link from "next/link";
-import { ComponentProps } from "react";
+import { GoDotFill } from "react-icons/go";
+import LineHoverLink from "./ui/line-hover-link";
+import { FiGithub } from "react-icons/fi";
 
-export const ProjectBox = ({
-  title,
-  description,
-  designation,
-  livelink,
-  repolink,
-  className,
-}: Project & ComponentProps<"div">) => {
+export type Project = {
+  title: string;
+  stack: string[];
+  description: string;
+  livelink: string | null;
+  repolink: string | null;
+  accent: string;
+};
+
+const godployProject: Project = {
+  title: "GOdploy",
+  stack: ["GO", "Svelte", "TypeScript", "SQLite", "Docker SDK", "Traefik"],
+  description:
+    "Self-hosted PAAS — a Railway / Netlify alternative for your own infrastructure.",
+  livelink: null,
+  repolink: "https://github.com/Roshan-anand/godploy",
+  accent: "text-accent-purple",
+};
+
+const sketchyProject: Project = {
+  title: "Sketchy IO",
+  stack: ["Bun", "Socket.IO", "React"],
+  description:
+    "Online multiplayer pictionary game — draw, guess, and compete in real-time.",
+  livelink: "https://sketchy-io.roshananand.cloud",
+  repolink: "https://github.com/Roshan-anand/sketchy_io",
+  accent: "text-accent-green",
+};
+
+const codeJoinProject: Project = {
+  title: "Code Join",
+  stack: ["Node.js", "React", "Traefik", "Docker SDK"],
+  description:
+    "Collaborative cloud IDE — code with friends in real-time from your browser.",
+  livelink: "https://codejoin.roshananand.cloud",
+  repolink: "https://github.com/Roshan-anand/code-join",
+  accent: "text-accent-orange",
+};
+
+const projects: Project[] = [godployProject, sketchyProject, codeJoinProject];
+
+export const Projects = () => {
   return (
-    <Card className={cn("p-4 md:p-2 gap-2", className)}>
-      <header className="flex gap-2 items-center">
-        <h3 className="magic rounded-md p-1 w-fit -rotate-1">{title}</h3>
-        {repolink ? (
-          <Link
-            className={cn(buttonVariants({ variant: "secondary" }), "ml-auto")}
-            href={repolink}
-            target="_blank"
-            rel="noopener noreferrer"
+    <section className="flex flex-col gap-3 w-fit mx-auto">
+      {projects.map(({ title, description, livelink, repolink, accent }, i) => {
+        return (
+          <article
+            key={title}
+            className="flex flex-col gap-2 border border-dim-foreground/50 p-1 px-3 rounded-sm"
           >
-            <FaGithub className="icon-md text-muted-foreground" />
-          </Link>
-        ) : (
-          <span
-            className={cn(buttonVariants({ variant: "secondary" }), "ml-auto")}
-          >
-            <FaEyeSlash className="ml-auto" />
-          </span>
-        )}
-        {livelink && (
-          <Link
-            href={livelink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(buttonVariants({ variant: "secondary" }))}
-          >
-            <LiaExternalLinkAltSolid className="icon-md " />
-          </Link>
-        )}
-      </header>
-
-      <p className="flex gap-3 bg-accent text-accent-foreground px-2">
-        {designation.join(" - ")}
-      </p>
-
-      <p className="px-2">{description}</p>
-    </Card>
+            <div className={cn("flex items-center gap-2", accent)}>
+              <GoDotFill />
+              <LineHoverLink
+                href={livelink || repolink || "#"}
+                variant="scribble"
+                className={accent}
+              >
+                <h3>{title}</h3>
+              </LineHoverLink>
+              <a href={repolink || "#"} className="text-subtle-foreground ml-auto">
+                <FiGithub />
+              </a>
+            </div>
+            <p className="text-dim-foreground">{description}</p>
+          </article>
+        );
+      })}
+    </section>
   );
 };
