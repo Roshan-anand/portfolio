@@ -18,7 +18,7 @@ export const ProjectBox = ({
   return (
     <Card className={cn("p-4 md:p-2 gap-2", className)}>
       <header className="flex gap-2 items-center">
-        <h3 className="magic rounded-md p-1 w-fit -rotate-1">{title}</h3>
+        <h3 className="magic-static text-foreground rounded-md p-1 w-fit -rotate-1">{title}</h3>
         {repolink ? (
           <Link
             className={cn(buttonVariants({ variant: "secondary" }), "ml-auto")}

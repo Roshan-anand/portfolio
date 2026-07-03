@@ -1,5 +1,6 @@
 "use client";
 
+import { IoIosSunny ,IoIosMoon} from "react-icons/io";
 import { FiSun } from "react-icons/fi";
 import { FaRegMoon } from "react-icons/fa";
 import { useTheme } from "next-themes";
@@ -32,7 +33,7 @@ export function ThemeToggle({ className }: React.ComponentProps<"button">) {
       variant={"primary"}
       className={cn("", className)}
     >
-      {theme === "light" ? <FaRegMoon className=""/> : <FiSun className="w-full" />}
+      {theme === "light" ? <IoIosMoon className="size-8"/> : <IoIosSunny className="size-8" />}
     </Button>
   );
 }
