@@ -1,68 +1,47 @@
 import Hero from "@/components/hero";
-import ModeToggle from "@/components/mode";
-import { ProjectBox } from "@/components/projects";
+import { Projects } from "@/components/projects";
 import Social from "@/components/Socila";
 import Tech from "@/components/tech";
 import { Card } from "@/components/ui/card";
-import { Project } from "@/lib/types";
-
-const godployProject: Project = {
-  title: "GODPLOY",
-  designation: ["FULLSTACK", "GO", "SVELTE"],
-  description:
-    "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
-  livelink: null,
-  repolink: "https://github.com/Roshan-anand/godploy",
-};
-
-const sketchyProject: Project = {
-  title: "SKETCHY IO",
-  designation: ["FULLSTACK", "TS"],
-  description: "An online multiplayer drawing and guessing pictionary game.",
-  livelink: "https://sketchy-io.roshananand.cloud",
-  repolink: "https://github.com/Roshan-anand/sketchy_io",
-};
-
-const codeJoinProject: Project = {
-  title: "CODE JOIN",
-  designation: ["FULLSTACK", "TS"],
-  description:
-    "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
-  livelink: "https://codejoin.roshananand.cloud",
-  repolink: "https://github.com/Roshan-anand/code-join",
-};
+import Image from "next/image";
 
 const page = () => {
   return (
-    <main className="wave-bg rounded-t-2xl w-[95vw] max-w-250 h-[95vh] min-h-270 mx-auto my-5 md:my-10 p-2 flex flex-col md:grid grid-cols-12 grid-rows-12 *:m-3">
-      <div className="hidden col-span-4 row-span-2 col-start-9  row-start-2 md:flex justify-center items-center">
-        <Card className="p-2 m-0 -rotate-15 hover:rotate-0 transition-all transform duration-500">
-          <h3>OPEN TO WORK</h3>
-        </Card>
+    <main className="rounded-t-2xl w-[95vw] max-w-290 h-[95vh] min-h-270 mx-auto my-5 md:my-10 p-2 flex flex-col md:grid grid-cols-12 grid-rows-12 *:m-2">
+      <div className="col-span-2 row-span-1 col-start-2 row-start-2 flex items-end justify-end">
+        <h3 className="border-dim-foreground border-2 border-dashed  text-center px-1 rounded-xl text-accent-green/80 ">
+          OPEN TO WORK
+        </h3>
       </div>
 
-      <Hero className="col-span-5 row-span-3 row-start-2" />
+      <Card className="p-0 col-span-2 row-span-2 col-start-4 row-start-2">
+        <div className="overflow-hidden bg-secondary-background p-1">
+          <Image
+            src="/no-bg-profile.png"
+            alt="profile"
+            width="300"
+            height="300"
+            className="size-full object-contain object-center"
+          />
+        </div>
+      </Card>
 
-      <Social className="col-span-4 row-span-3 col-start-9 row-start-4" />
+      <Hero className="col-span-4 row-span-2 row-start-2" />
 
-      <ModeToggle className="col-span-4 row-span-1 row-start-7 col-start-9" />
+      <Social className="col-span-5 row-start-4" />
 
-      <ProjectBox
-        {...godployProject}
-        className="col-span-5 row-span-2 row-start-5 justify-around"
-      />
+      <Card className="col-span-3 row-span-1 row-start-6 col-start-9 flex justify-center">
+        <h3 className="flex justify-around items-center py-1 scale-110">
+          <span>&#3205;</span>
+          <span>A</span>
+          <span>&#2309;</span>
+          <span>&#3333;</span>
+        </h3>
+      </Card>
 
-      <ProjectBox
-        {...sketchyProject}
-        className="col-span-5 row-span-2 row-start-7 col-start-4 justify-around"
-      />
+      <Projects className="col-span-5 row-span-4" />
 
-      <ProjectBox
-        {...codeJoinProject}
-        className="col-span-5 row-span-2 col-start-4 justify-around"
-      />
-
-      <Tech className="col-span-3 row-span-6 row-start-3 col-start-1" />
+      <Tech className="col-span-3 row-span-4 row-start-3 col-start-1" />
     </main>
   );
 };

@@ -4,4 +4,5 @@ export type Project = {
   description: string;
   livelink: string | null;
   repolink: string | null;
+  accent: string;
 };

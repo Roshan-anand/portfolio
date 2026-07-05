@@ -1,34 +1,39 @@
 import { cn } from "@/lib/utils";
 import { Card } from "./ui/card";
-import Image from "next/image";
+import LineHoverLink from "./ui/line-hover-link";
+import { FaCaretRight } from "react-icons/fa6";
 
 const Hero = ({ className }: React.ComponentProps<"div">) => {
   return (
-    <Card
-      id="about"
-      className={cn(
-        "h-full flex justify-around md:justify-center p-3 bg-transparent border-none shadow-none",
-        className,
-      )}
-    >
-      <div className="flex gap-2 items-end">
-        <div className="magic rounded-md overflow-hidden">
-          <Image
-            src="/profile-big.png"
-            alt="profile"
-            width="100"
-            height="100"
-            className="size-full"
-          />
-        </div>
-        <h1 className="flex flex-col">
-          <span>ROSHAN</span>
-          <span className="ml-3">ANAND</span>
-        </h1>
+    <Card className={cn("flex flex-col gap-0 border-0", className)}>
+      <h1 className="flex text-accent-magenta-light/80">RO$HAN ANAND</h1>
+
+      <div className="flex flex-col gap-1 text-dim-foreground">
+        <p className="flex items-center">
+          <FaCaretRight className="mr-1 text-accent-magenta-light/80" />
+          20yrs | Backend | Cloud | Fullstack
+        </p>
+        <p className="flex items-center">
+          <FaCaretRight className="mr-1 text-accent-magenta-light/80" />
+          Building
+          <LineHoverLink
+            href="https://github.com/Roshan-anand/godploy"
+            variant="scribble"
+            className="text-accent-orange/80 px-1"
+          >
+            GOdploy
+          </LineHoverLink>
+          , a deployment platform
+        </p>
+        <p className="flex items-center">
+          <FaCaretRight className="mr-1 text-accent-magenta-light/80" />
+          Agent : PI + GPT + DeepSeek
+        </p>
+        <p className="flex items-center">
+          <FaCaretRight className="mr-1 text-accent-magenta-light/80" />
+          Exploring : Agent Sandboxing
+        </p>
       </div>
-      <h3 className="magic text-center p-2 bg-muted rounded-md">
-        20yrs | BACKEND | CLOUD | FULLSTACK
-      </h3>
     </Card>
   );
 };

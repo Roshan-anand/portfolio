@@ -1,4 +1,4 @@
-import { Card, CardContent, CardTitle } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import { IconType } from "react-icons";
 import { FaTools } from "react-icons/fa";
 import { PiStackFill } from "react-icons/pi";
@@ -17,47 +17,42 @@ const skills: Skills[] = [
     category: "CORE",
     skills: ["GOlang", "TypeScript", "SQL"],
     icon: FaCode,
-    bg: "bg-primary",
+    bg: "text-accent-blue",
   },
   {
     category: "META",
     skills: ["PERN", "Svelte", "SQLite", "PSQL"],
     icon: PiStackFill,
-    bg: "bg-secondary",
+    bg: "text-accent-green",
   },
   {
     category: "DEV",
     skills: ["Linux", "Git", "Docker", "Traefik", "AWS-EC2"],
     icon: FaTools,
-    bg: "bg-muted",
+    bg: "text-accent-yellow",
   },
 ];
 
 const Tech = ({ className }: React.ComponentProps<"div">) => {
   return (
-    <Card
-      className={cn(
-        "px-1 flex flex-col items-center justify-between",
-        className,
-      )}
-    >
-      <CardTitle className="flex gap-2">
-        <FaCode className="icon-lg" />
-        <h1>SKILLS</h1>
-      </CardTitle>
-      <CardContent className="p-1 flex flex-wrap justify-center md:block">
+    <Card className={cn("p-2 flex flex-col gap-3", className)}>
+      <p className="text-muted-foreground flex items-center gap-1">
+        <span className="text-accent-magenta">$</span>cat skills.log
+      </p>
+
+      <CardContent className="flex md:flex-col p-0 gap-4">
         {skills.map(({ category, skills, icon: Icon, bg }) => (
-          <figure
-            className="flex flex-col gap-2 my-5 w-[45%] md:w-full"
-            key={category}
-          >
-            <h3 className="flex items-center gap-2 ">
+          <figure className="flex flex-col gap-1.5" key={category}>
+            <p className="flex items-center gap-2 text-dim-foreground">
               <Icon />
               <span>{category} :</span>
-            </h3>
-            <div className="flex flex-wrap gap-3 p-1">
+            </p>
+            <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
-                <p key={skill} className={cn("px-1 rounded-sm magic", bg)}>
+                <p
+                  key={skill}
+                  className={cn("px-1 rounded-sm border-dotted border-2 border-dim-foreground", bg)}
+                >
                   {skill}
                 </p>
               ))}

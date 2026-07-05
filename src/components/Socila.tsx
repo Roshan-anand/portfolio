@@ -1,6 +1,5 @@
 import { ComponentProps } from "react";
 import { Card } from "./ui/card";
-import { buttonVariants } from "./ui/button";
 import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
@@ -8,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { IconType } from "react-icons/lib";
 import Link from "next/link";
 import { SiPeerlist } from "react-icons/si";
+import { FaReddit } from "react-icons/fa";
 
 type Social = {
   link: string;
@@ -28,45 +28,32 @@ const socials: Social[] = [
     icon: MdEmail,
   },
   {
-    link: "https://peerlist.io/roshananand",
-    icon: SiPeerlist,
-  },
-  {
     link: "https://discordapp.com/users/1114575128190271530",
     icon: FaDiscord,
+  },
+  {
+    link: "https://www.reddit.com/user/Roshan_anand",
+    icon: FaReddit,
+  },
+  {
+    link: "https://peerlist.io/roshananand",
+    icon: SiPeerlist,
   },
 ];
 
 const Social = ({ className }: ComponentProps<"div">) => {
   return (
-    <Card
-      className={cn(
-        "border-0 bg-transparent shadow-none flex justify-around md:justify-center items-center flex-row flex-wrap py-0 px-0 gap-0",
-        className,
-      )}
-    >
-      <h1 className="hidden md:flex flex-col flex- w-1/3 h-1/2 justify-center items-center">
-        <span>LIN</span>
-        <span>KS.</span>
-      </h1>
+    <Card className={cn("flex-row items-center justify-around", className)}>
       {socials.map(({ link, icon: Icon }, i) => {
         return (
-          <span
+          <Link
             key={i}
-            className="flex w-14 md:w-1/3 md:h-1/2 justify-center items-center"
+            className="p-2 hover:text-accent-purple/80 text-dim-foreground hover:scale-105"
+            href={link}
+            target="_blank"
           >
-            <Link
-              key={i}
-              className={cn(
-                buttonVariants({ variant: "secondary" }),
-                "w-[80%]",
-              )}
-              href={link}
-              target="_blank"
-            >
-              <Icon className="size-full" />
-            </Link>
-          </span>
+            <Icon className="size-6" />
+          </Link>
         );
       })}
     </Card>
