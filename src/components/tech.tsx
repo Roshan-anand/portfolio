@@ -17,25 +17,25 @@ const skills: Skills[] = [
     category: "CORE",
     skills: ["GOlang", "TypeScript", "SQL"],
     icon: FaCode,
-    bg: "text-accent-blue",
+    bg: "text-accent-blue/80",
   },
   {
     category: "META",
     skills: ["PERN", "Svelte", "SQLite", "PSQL"],
     icon: PiStackFill,
-    bg: "text-accent-green",
+    bg: "text-accent-green/80",
   },
   {
     category: "DEV",
     skills: ["Linux", "Git", "Docker", "Traefik", "AWS-EC2"],
     icon: FaTools,
-    bg: "text-accent-yellow",
+    bg: "text-accent-yellow/80",
   },
 ];
 
 const Tech = ({ className }: React.ComponentProps<"div">) => {
   return (
-    <Card className={cn("p-2 flex flex-col gap-3", className)}>
+    <Card className={cn("p-2 flex flex-col justify-around", className)}>
       <p className="text-muted-foreground flex items-center gap-1">
         <span className="text-accent-magenta">$</span>cat skills.log
       </p>

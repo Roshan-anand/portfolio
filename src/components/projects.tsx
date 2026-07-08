@@ -39,7 +39,7 @@ const projectList = [godployProject, sketchyProject, codeJoinProject];
 
 export const Projects = ({ className }: ComponentProps<"div">) => {
   return (
-    <Card className={cn("p-2 flex flex-col", className)}>
+    <Card className={cn("p-2 flex flex-col justify-around", className)}>
       <p className="text-muted-foreground flex items-center gap-1">
         <span className="text-accent-magenta">$</span>cat projects.log
       </p>
