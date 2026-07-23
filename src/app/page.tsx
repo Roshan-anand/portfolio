@@ -7,19 +7,19 @@ import { Card } from "@/components/ui/card";
 import { Project } from "@/lib/types";
 
 const godployProject: Project = {
-  title: "GODPLOY",
+  title: "HASU",
   designation: ["FULLSTACK", "GO", "SVELTE"],
   description:
     "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
   livelink: null,
-  repolink: "https://github.com/Roshan-anand/godploy",
+  repolink: "https://github.com/Roshan-anand/hasu",
 };
 
 const sketchyProject: Project = {
   title: "SKETCHY IO",
   designation: ["FULLSTACK", "TS"],
   description: "An online multiplayer drawing and guessing pictionary game.",
-  livelink: "https://sketchy-io.roshananand.cloud",
+  livelink: "https://sketchy-io.rshn.cloud",
   repolink: "https://github.com/Roshan-anand/sketchy_io",
 };
 
@@ -28,7 +28,7 @@ const codeJoinProject: Project = {
   designation: ["FULLSTACK", "TS"],
   description:
     "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
-  livelink: "https://codejoin.roshananand.cloud",
+  livelink: "https://codejoin.rshn.cloud",
   repolink: "https://github.com/Roshan-anand/code-join",
 };
 
