@@ -34,7 +34,7 @@ const codeJoinProject: Project = {
 
 const page = () => {
   return (
-    <main className="wave-bg rounded-t-2xl w-[95vw] max-w-250 h-[95vh] min-h-270 mx-auto my-5 md:my-10 p-2 flex flex-col md:grid grid-cols-12 grid-rows-12 *:m-3">
+    <main className="wave-bg rounded-t-2xl w-[95vw] max-w-250 md:h-[95vh] min-h-270 mx-auto my-5 md:my-10 p-2 flex flex-col md:grid grid-cols-12 grid-rows-12 *:m-3">
       <div className="hidden col-span-4 row-span-2 col-start-9  row-start-2 md:flex justify-center items-center">
         <Card className="p-2 m-0 -rotate-15 hover:rotate-0 transition-all transform duration-500">
           <h3>OPEN TO WORK</h3>

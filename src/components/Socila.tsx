@@ -53,7 +53,7 @@ const Social = ({ className }: ComponentProps<"div">) => {
       <Link
         href="https://dub.sh/rshn"
         target="_blank"
-        className="flex justify-center items-center h-1/2 w-2/3"
+        className="flex justify-center items-center h-1/2 md:w-2/3"
       >
         <h1
           className={cn(
