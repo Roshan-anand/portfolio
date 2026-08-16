@@ -1,0 +1,75 @@
+/* Hallmark · studied: yes · DNA-source: url
+ * source-url: https://vyrx.dev/
+ * theme: studied-DNA · paper oklch(16.30% 0.0027 248.0) · accent oklch(79.47% 0.1082 116.2)
+ * display: JetBrains Mono · body: JetBrains Mono · label: JetBrains Mono
+ * axes: dark / mono / chromatic-green
+ */
+:root {
+  --color-paper:        oklch(16.30% 0.0027 248.0);
+  --color-paper-2:      oklch(19.06% 0.0026 248.0);
+  --color-paper-3:      oklch(22.52% 0.0049 248.0);
+  --color-ink:          oklch(81.06% 0.0567 81.2);
+  --color-ink-2:        oklch(55.05% 0.0234 62.6);
+  --color-rule:         oklch(27.15% 0.0047 248.0);
+  --color-accent:       oklch(79.47% 0.1082 116.2);
+  --color-accent-ink:   oklch(16.30% 0.0027 248.0);
+  --color-focus:        oklch(79.47% 0.1082 116.2);
+  --color-dim:          oklch(55.91% 0.0161 74.3);
+  --color-red:          oklch(71.51% 0.1430 28.9);
+  --color-orange:       oklch(75.37% 0.1334 53.8);
+  --color-yellow:       oklch(78.45% 0.1146 79.2);
+  --color-aqua:         oklch(77.02% 0.0886 146.6);
+  --color-blue:         oklch(76.30% 0.0599 179.6);
+  --color-purple:       oklch(70.54% 0.0976 2.2);
+
+  --font-display: var(--font-jb), "JetBrains Mono", ui-monospace, monospace;
+  --font-body:    var(--font-jb), "JetBrains Mono", ui-monospace, monospace;
+  --font-mono:    var(--font-jb), "JetBrains Mono", ui-monospace, monospace;
+
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs:  8px;
+  --space-sm:  12px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  --text-xs:   0.6875rem;
+  --text-sm:   0.75rem;
+  --text-base: 0.875rem;
+  --text-md:   1rem;
+  --text-lg:   1.5rem;
+  --text-xl:   1.875rem;
+
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+  --dur-slow: 400ms;
+
+  --radius-card:  3px;
+  --radius-pill:  3px;
+  --radius-input: 3px;
+  --rule: 1px;
+
+  --color-paper-frost: oklch(16.30% 0.0027 248.0 / 0.62);
+  --color-aqua-border: oklch(77.02% 0.0886 146.6 / 0.3);
+  --color-error: var(--color-red);
+  --color-success: var(--color-aqua);
+  --glow-wordmark: 0 0 8px oklch(79.47% 0.1082 116.2 / 0.2);
+
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --banner-height: 52px;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}

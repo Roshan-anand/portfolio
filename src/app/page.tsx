@@ -1,70 +1,33 @@
-import Hero from "@/components/hero";
-import ModeToggle from "@/components/mode";
-import { ProjectBox } from "@/components/projects";
-import Social from "@/components/Socila";
-import Tech from "@/components/tech";
-import { Card } from "@/components/ui/card";
-import { Project } from "@/lib/types";
+import { SiteNav } from "@/components/site-nav";
+import { HeroSplit } from "@/components/hero-split";
+import { WorkList } from "@/components/work-list";
+import { ProjectList } from "@/components/project-list";
+import { SiteFooter } from "@/components/site-footer";
 
-const godployProject: Project = {
-  title: "HASU",
-  designation: ["FULLSTACK", "GO", "SVELTE"],
-  description:
-    "🔨Currenty working on a selfhost PAAS Alternative to Netlify and Heroku....",
-  livelink: null,
-  repolink: "https://github.com/Roshan-anand/hasu",
-};
-
-const sketchyProject: Project = {
-  title: "SKETCHY IO",
-  designation: ["FULLSTACK", "TS"],
-  description: "An online multiplayer drawing and guessing pictionary game.",
-  livelink: "https://sketchy-io.rshn.cloud",
-  repolink: "https://github.com/Roshan-anand/sketchy_io",
-};
-
-const codeJoinProject: Project = {
-  title: "CODE JOIN",
-  designation: ["FULLSTACK", "TS"],
-  description:
-    "A collaborative cloud IDE, where you can code with your friends and colleagues in real-time.",
-  livelink: "https://codejoin.rshn.cloud",
-  repolink: "https://github.com/Roshan-anand/code-join",
-};
-
-const page = () => {
+export default function Page() {
   return (
-    <main className="wave-bg rounded-t-2xl w-[95vw] max-w-250 md:h-[95vh] min-h-270 mx-auto my-5 md:my-10 p-2 flex flex-col md:grid grid-cols-12 grid-rows-12 *:m-3">
-      <div className="hidden col-span-4 row-span-2 col-start-9  row-start-2 md:flex justify-center items-center">
-        <Card className="p-2 m-0 -rotate-15 hover:rotate-0 transition-all transform duration-500">
-          <h3>OPEN TO WORK</h3>
-        </Card>
+    <>
+      <SiteNav />
+      <main className="shell">
+        <HeroSplit />
+
+        <section className="block stack-block reveal" id="work" style={{ "--i": 1 } as React.CSSProperties}>
+          <h2 className="cat">
+            <span className="cat__mark">$</span> cat work
+          </h2>
+          <WorkList />
+        </section>
+
+        <section className="block stack-block reveal" style={{ "--i": 2 } as React.CSSProperties}>
+          <h2 className="cat">
+            <span className="cat__mark">$</span> cat projects
+          </h2>
+          <ProjectList />
+        </section>
+      </main>
+      <div className="shell">
+        <SiteFooter />
       </div>
-
-      <Hero className="col-span-5 row-span-3 row-start-2" />
-
-      <Social className="col-span-4 row-span-3 col-start-9 row-start-4" />
-
-      <ModeToggle className="col-span-4 row-span-1 row-start-7 col-start-9" />
-
-      <ProjectBox
-        {...godployProject}
-        className="col-span-5 row-span-2 row-start-5 justify-around"
-      />
-
-      <ProjectBox
-        {...sketchyProject}
-        className="col-span-5 row-span-2 row-start-7 col-start-4 justify-around"
-      />
-
-      <ProjectBox
-        {...codeJoinProject}
-        className="col-span-5 row-span-2 col-start-4 justify-around"
-      />
-
-      <Tech className="col-span-3 row-span-6 row-start-3 col-start-1" />
-    </main>
+    </>
   );
-};
-
-export default page;
+}
