@@ -12,25 +12,36 @@ export const profile: Profile = {
   email: "roshan4nand@gmail.com",
   resume: "https://dub.sh/rshn",
   socials: [
-    { label: "github", href: "https://github.com/Roshan-anand", icon: "github" },
+    {
+      label: "github",
+      href: "https://github.com/Roshan-anand",
+      icon: "github",
+    },
     { label: "x", href: "https://x.com/R0SHAN_ANAND", icon: "x" },
     { label: "mail", href: "mailto:roshan4nand@gmail.com", icon: "mail" },
-    { label: "discord", href: "https://discordapp.com/users/1114575128190271530", icon: "discord" },
-    { label: "reddit", href: "https://www.reddit.com/user/Roshan_anand", icon: "reddit" },
+    {
+      label: "discord",
+      href: "https://discordapp.com/users/1114575128190271530",
+      icon: "discord",
+    },
+    {
+      label: "reddit",
+      href: "https://www.reddit.com/user/Roshan_anand",
+      icon: "reddit",
+    },
   ],
   skills: [
-    "golang",
-    "typescript",
-    "sql",
-    "pern",
-    "svelte",
-    "sqlite",
-    "postgresql",
+    "Golang",
+    "Typescript",
+    "PERN",
+    "Svelte",
+    "SQLite",
+    "Postgresql",
     "linux",
     "git",
-    "docker",
-    "traefik",
-    "aws ec2",
+    "Docker",
+    "Traefik",
+    "aws EC2",
   ],
   work: [
     {
@@ -41,7 +52,7 @@ export const profile: Profile = {
       href: "https://pradxclusive.com",
       summary:
         "Advised on infrastructure, dev tooling, and AI workflows at a brand house.",
-      tech: ["Go", "TypeScript", "Docker", "Next.js", "AI workflows"],
+      tech: ["PI SDK", "AI workflows", "Next.js"],
     },
   ],
   projects: [
@@ -49,7 +60,7 @@ export const profile: Profile = {
       title: "HASU",
       stack: "Go, Svelte",
       description:
-        "A self-hosted PaaS alternative to Netlify and Heroku. In development.",
+        "A self-hosted PaaS alternative to Railway, Netlify and vercel. In development.",
       live: null,
       repo: "https://github.com/Roshan-anand/hasu",
       status: "in development",
@@ -57,7 +68,8 @@ export const profile: Profile = {
     {
       title: "Sketchy IO",
       stack: "TypeScript",
-      description: "An online multiplayer drawing and guessing pictionary game.",
+      description:
+        "An online multiplayer drawing and guessing pictionary game.",
       live: "https://sketchy-io.rshn.cloud",
       repo: "https://github.com/Roshan-anand/sketchy_io",
     },
