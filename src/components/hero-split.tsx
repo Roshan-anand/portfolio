@@ -6,6 +6,7 @@ import type { IconType } from "react-icons";
 import { callHref, profile } from "@/lib/profile";
 import { CtaChip } from "@/components/cta-chip";
 import { SkillChips } from "@/components/skill-chips";
+import { PixelatedProfile } from "./pixel-profile";
 
 const SOCIAL_ICONS: Record<string, IconType> = {
   github: FaGithub,
@@ -17,9 +18,13 @@ const SOCIAL_ICONS: Record<string, IconType> = {
 
 export function HeroSplit() {
   return (
-    <section className="hero reveal" id="top" style={{ "--i": 0 } as React.CSSProperties}>
+    <section
+      className="hero reveal"
+      id="top"
+      style={{ "--i": 0 } as React.CSSProperties}
+    >
       <figure className="hero__figure">
-        <Image
+        {/*<Image
           className="hero__portrait"
           src="/no-bg-profile.png"
           alt="Roshan Anand"
@@ -27,7 +32,8 @@ export function HeroSplit() {
           height={720}
           priority
           fetchPriority="high"
-        />
+        />*/}
+        <PixelatedProfile />
       </figure>
       <div className="hero__identity">
         <div className="hero__heading">
@@ -48,7 +54,11 @@ export function HeroSplit() {
               const Icon = item.icon ? SOCIAL_ICONS[item.icon] : null;
               return (
                 <li key={item.label}>
-                  <a className="hero__social" href={item.href} aria-label={item.label}>
+                  <a
+                    className="hero__social"
+                    href={item.href}
+                    aria-label={item.label}
+                  >
                     {Icon ? <Icon className="hero__social-icon" /> : item.label}
                   </a>
                 </li>

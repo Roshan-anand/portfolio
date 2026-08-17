@@ -1,4 +1,3 @@
-<!-- Hallmark · studied: yes · DNA-source: url · source-url: https://vyrx.dev/ -->
 # Design — Portfolio (studied DNA)
 
 Locked design system. Future Hallmark runs read this file first; pages defer
