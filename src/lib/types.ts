@@ -10,6 +10,16 @@ export type SkillGroup = {
   href?: string;
 };
 
+export type NowSpan = {
+  text: string;
+  href?: string;
+  hl?: boolean;
+};
+
+export type NowItem = {
+  spans: NowSpan[];
+};
+
 export type Role = {
   org: string;
   role: string;
@@ -40,6 +50,7 @@ export type Profile = {
   email: string;
   resume: string;
   socials: LinkItem[];
+  now: NowItem[];
   skills: string[];
   work: Role[];
   projects: Project[];

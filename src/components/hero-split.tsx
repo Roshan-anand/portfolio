@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import type { IconType } from "react-icons";
 import { callHref, profile } from "@/lib/profile";
 import { CtaChip } from "@/components/cta-chip";
+import { NowList } from "@/components/now-list";
 import { SkillChips } from "@/components/skill-chips";
 import { PixelatedProfile } from "./pixel-profile";
 
@@ -43,9 +44,10 @@ export function HeroSplit() {
           </div>
           <div className="hero__status-block">
             <p className="hero__status">{profile.status}</p>
-            <p className="hero__status-sub">full-time · contract · intern</p>
+            {/*<p className="hero__status-sub">full-time · contract · intern</p>*/}
           </div>
         </div>
+        <NowList items={profile.now} />
         <SkillChips skills={profile.skills} />
         <div className="hero__divider" aria-hidden="true" />
         <div className="hero__contact">

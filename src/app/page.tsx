@@ -18,7 +18,7 @@ export default function Page() {
           <WorkList />
         </section>
 
-        <section className="block stack-block reveal" style={{ "--i": 2 } as React.CSSProperties}>
+        <section className="block stack-block reveal" id="projects" style={{ "--i": 2 } as React.CSSProperties}>
           <h2 className="cat">
             <span className="cat__mark">$</span> cat projects
           </h2>

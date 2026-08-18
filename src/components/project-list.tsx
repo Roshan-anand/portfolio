@@ -4,7 +4,7 @@ export function ProjectList() {
   return (
     <div className="work-list">
       {profile.projects.map((project) => (
-        <article className="work-item" key={project.title}>
+        <article className="work-item" id={project.title.toLowerCase()} key={project.title}>
           <div className="work-item__meta">
             <h3 className="work-item__title">{project.title}</h3>
             <p className="work-item__stack">{project.stack}</p>

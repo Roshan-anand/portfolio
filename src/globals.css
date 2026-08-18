@@ -445,6 +445,70 @@ img {
   color: var(--color-accent);
 }
 
+/* Hallmark · component: now-list · genre: atmospheric · theme: studied-DNA
+ * states: default · hover · focus · active · (static list; no disabled/loading/error/success)
+ * contrast: pass (ink on paper, accent on paper)
+ */
+/* ——— now list ——— */
+.now {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  margin: var(--space-2xs) 0 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  min-width: 0;
+}
+
+.now__item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-2xs);
+  align-items: center;
+  min-width: 0;
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-dim);
+}
+
+.now__mark {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: var(--color-aqua);
+  flex-shrink: 0;
+}
+
+.now__body {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--color-dim);
+}
+
+.now__hl {
+  color: var(--color-dim);
+}
+
+.now__link {
+  color: var(--color-accent);
+  border-bottom: var(--rule) solid color-mix(in oklch, var(--color-accent) 40%, transparent);
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .now__link:hover {
+    color: var(--color-ink);
+    border-color: var(--color-ink-2);
+  }
+}
+
+.now__link:active {
+  color: var(--color-aqua);
+  border-color: var(--color-aqua);
+}
+
 /* ——— skill chips ——— */
 .chips {
   display: flex;

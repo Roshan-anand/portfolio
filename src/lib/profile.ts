@@ -30,6 +30,29 @@ export const profile: Profile = {
       icon: "reddit",
     },
   ],
+  now: [
+    {
+      spans: [
+        { text: "Building " },
+        { text: "hasu", href: "https://github.com/Roshan-anand/hasu" },
+        { text: " — self-host deployment platform" },
+      ],
+    },
+    {
+      spans: [
+        { text: "Experiment on different " },
+        { text: "AI workflow", hl: true },
+        { text: "." },
+      ],
+    },
+    {
+      spans: [
+        { text: "Exploring cloud tech like " },
+        { text: "AI sandboxing", hl: true },
+        { text: "." },
+      ],
+    },
+  ],
   skills: [
     "Golang",
     "Typescript",
