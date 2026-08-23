@@ -303,7 +303,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -323,8 +323,8 @@ img {
 }
 
 .hero__social-icon {
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -681,6 +681,80 @@ img {
   color: var(--color-dim);
 }
 
+/* Hallmark · component: pi-ext-list · genre: atmospheric · theme: studied-DNA
+ * states: default · hover · focus · active
+ * contrast: pass (ink on paper, aqua on paper)
+ */
+.ext-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ext {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: var(--space-md);
+  row-gap: var(--space-3xs);
+  align-items: start;
+  padding-block: var(--space-lg);
+  border-top: var(--rule) solid var(--color-rule);
+  min-width: 0;
+}
+
+.ext__title {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--text-md);
+  line-height: 1.2;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.ext__repo {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  color: var(--color-aqua);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.ext__repo::after {
+  content: "";
+  position: absolute;
+  inset: -14px -8px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ext__repo:hover {
+    color: var(--color-ink);
+  }
+}
+
+.ext__repo:active {
+  color: var(--color-accent);
+}
+
+.ext__body {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  max-width: 52ch;
+  color: var(--color-dim);
+  font-size: var(--text-xs);
+}
+
 /* ——— Ft8 spread ——— */
 .foot {
   border-top: var(--rule) solid var(--color-rule);
@@ -763,10 +837,18 @@ img {
 
 @media (min-width: 60rem) {
   .hero {
-    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+    display: flex;
     gap: var(--space-3xl);
     padding-block-start: var(--space-2xl);
     padding-block-end: var(--space-4xl);
+  }
+
+  .hero__figure {
+    flex: 35 1 0;
+  }
+
+  .hero__identity {
+    flex: 65 1 0;
   }
 
   .hero__portrait {

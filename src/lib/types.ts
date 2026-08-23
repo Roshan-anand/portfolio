@@ -39,6 +39,12 @@ export type Project = {
   status?: string;
 };
 
+export type PiExt = {
+  title: string;
+  description: string;
+  repo: string | null;
+};
+
 export type Profile = {
   name: string;
   handle: string;
@@ -54,4 +60,5 @@ export type Profile = {
   skills: string[];
   work: Role[];
   projects: Project[];
+  piExtensions: PiExt[];
 };

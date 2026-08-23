@@ -1,7 +1,8 @@
-import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
-import { FaXTwitter, FaDiscord, FaReddit } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+import { FiGithub } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiDiscordLine } from "react-icons/ri";
+import { TbBrandReddit } from "react-icons/tb";
+import { GoMail } from "react-icons/go";
 import type { IconType } from "react-icons";
 import { callHref, profile } from "@/lib/profile";
 import { CtaChip } from "@/components/cta-chip";
@@ -10,11 +11,11 @@ import { SkillChips } from "@/components/skill-chips";
 import { PixelatedProfile } from "./pixel-profile";
 
 const SOCIAL_ICONS: Record<string, IconType> = {
-  github: FaGithub,
+  github: FiGithub,
   x: FaXTwitter,
-  mail: MdEmail,
-  discord: FaDiscord,
-  reddit: FaReddit,
+  mail: GoMail,
+  discord: RiDiscordLine,
+  reddit: TbBrandReddit,
 };
 
 export function HeroSplit() {

@@ -7,7 +7,7 @@ export const profile: Profile = {
   status: "open to work",
   lede: "I ship backends, the boxes they run on, and the pages in front. On contract. Open to the next role.",
   about:
-    "I write Go and TypeScript. PostgreSQL when it matters, SQLite when it doesn’t. Linux, Git, Docker, Traefik, EC2. Currently the technical consultant at Pradxclusive — infra, tooling, AI workflows, and the Next.js landings in front.",
+    "I write Go and TypeScript. PostgreSQL when it matters, SQLite when it doesn’t. Linux, Git, Docker, Traefik, EC2.",
   calUrl: "https://cal.com/roshan-anand/30min",
   email: "roshan4nand@gmail.com",
   resume: "https://dub.sh/rshn",
@@ -75,7 +75,7 @@ export const profile: Profile = {
       href: "https://pradxclusive.com",
       summary:
         "Advised on infrastructure, dev tooling, and AI workflows at a brand house.",
-      tech: ["PI SDK", "AI workflows", "Next.js"],
+      tech: ["PI SDK", "AI workflows", "Typescript"],
     },
   ],
   projects: [
@@ -103,6 +103,20 @@ export const profile: Profile = {
         "A collaborative cloud IDE where you can code with friends and colleagues in real time.",
       live: "https://codejoin.rshn.cloud",
       repo: "https://github.com/Roshan-anand/code-join",
+    },
+  ],
+  piExtensions: [
+    {
+      title: "pi-140k-context",
+      description:
+        "Footer monitor for pi. Shows context usage against a fixed 140k window to flag the degradation zone.",
+      repo: "https://github.com/Roshan-anand/pi-140k-context",
+    },
+    {
+      title: "pi-real-talk",
+      description:
+        "Injects talk rules into pi so it drops fluff and gets to the point. Caveman, unslop, and mix modes.",
+      repo: "https://github.com/Roshan-anand/pi-real-talk",
     },
   ],
 };

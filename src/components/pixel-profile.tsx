@@ -3,10 +3,10 @@ import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 
 export function PixelatedProfile() {
   return (
-    <div className="mx-auto mt-8 flex w-full items-center justify-center">
+    <div className="mx-auto flex items-center justify-center">
       <PixelatedCanvas
         src="/no-bg-profile.png"
-        width={400}
+        width={350}
         height={300}
         cellSize={4}
         dotScale={0.6}
@@ -18,11 +18,11 @@ export function PixelatedProfile() {
         dropoutStrength={0.009}
         interactive
         responsive
-        distortionStrength={15}
-        distortionRadius={30}
+        distortionStrength={25}
+        distortionRadius={25}
         distortionMode='repel'
         followSpeed={0.3}
-        jitterStrength={4}
+        jitterStrength={13}
         jitterSpeed={1}
         sampleAverage
         className="rounded-xl shadow-lg"
