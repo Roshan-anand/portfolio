@@ -30,3 +30,30 @@ export function PixelatedProfile() {
     </div>
   );
 }
+
+
+export function PixelatedGod() {
+  return (
+    <div className="mx-auto flex items-center justify-center">
+      <PixelatedCanvas
+        src="/ganesha.png"
+        width={600}
+        height={710}
+        cellSize={4}
+        dotScale={0.5}
+        shape="circle"
+        backgroundColor="#0d0e0f"
+        dropoutStrength={0.01}
+        interactive
+        responsive
+        distortionStrength={25}
+        distortionRadius={25}
+        distortionMode='attract'
+        followSpeed={0.3}
+        jitterStrength={20}
+        jitterSpeed={1}
+        sampleAverage
+      />
+    </div>
+  );
+}
