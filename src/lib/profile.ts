@@ -84,7 +84,7 @@ export const profile: Profile = {
       stack: "Go, Svelte",
       description:
         "A self-hosted PaaS alternative to Railway, Netlify and vercel. In development.",
-      live: null,
+      live: "https://hasu.rshn.cloud",
       repo: "https://github.com/Roshan-anand/hasu",
       status: "in development",
     },
