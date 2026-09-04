@@ -34,7 +34,7 @@ export const profile: Profile = {
     {
       spans: [
         { text: "Building " },
-        { text: "hasu", href: "https://github.com/Roshan-anand/hasu" },
+        { text: "hasu", href: "https://hasu.rshn.cloud" },
         { text: " — self-host deployment platform" },
       ],
     },
