@@ -68,15 +68,6 @@ export const profile: Profile = {
   ],
   work: [
     {
-      org: "OTB",
-      role: "DevOps Intern",
-      type: "Contract",
-      period: "Sep 2026 — Present",
-      href: "https://onlinetyrebazaar.com",
-      summary: "Working with Devops team, handeling OTB's microservice.",
-      tech: ["Coolify", "Grafana"],
-    },
-    {
       org: "Pradxclusive",
       role: "Tech consultant & developer",
       type: "Contract",

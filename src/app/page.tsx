@@ -28,7 +28,7 @@ export default function Page() {
 
         <section className="block stack-block reveal" id="pi-extensions" style={{ "--i": 3 } as React.CSSProperties}>
           <h2 className="cat">
-            <span className="cat__mark">$</span> cat pi-extensions
+            <span className="cat__mark">$</span> cat custom-pi-extensions
           </h2>
           <PiExtList />
         </section>
