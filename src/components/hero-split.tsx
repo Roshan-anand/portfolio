@@ -26,15 +26,6 @@ export function HeroSplit() {
       style={{ "--i": 0 } as React.CSSProperties}
     >
       <figure className="hero__figure">
-        {/*<Image
-          className="hero__portrait"
-          src="/no-bg-profile.png"
-          alt="Roshan Anand"
-          width={720}
-          height={720}
-          priority
-          fetchPriority="high"
-        />*/}
         <PixelatedProfile />
       </figure>
       <div className="hero__identity">
@@ -44,8 +35,13 @@ export function HeroSplit() {
             <p className="hero__role">{profile.role}</p>
           </div>
           <div className="hero__status-block">
-            <p className="hero__status">{profile.status}</p>
-            {/*<p className="hero__status-sub">full-time · contract · intern</p>*/}
+            <p
+              className={`hero__status hero__status--${
+                profile.status ? "accent" : "orange hero__status--struck"
+              }`}
+            >
+              <span className="hero__status-text">open to work</span>
+            </p>
           </div>
         </div>
         <NowList items={profile.now} />

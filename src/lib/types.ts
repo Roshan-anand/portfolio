@@ -4,10 +4,12 @@ export type LinkItem = {
   icon?: string;
 };
 
-export type SkillGroup = {
-  key: string;
-  value: string;
-  href?: string;
+export type Skill = {
+  name: string;
+  /** Brand hex color. Falls back to a tonal cycle when omitted. */
+  color?: string;
+  /** Keeps the chip vivid instead of the dimmed default. */
+  light?: boolean;
 };
 
 export type NowSpan = {
@@ -49,15 +51,13 @@ export type Profile = {
   name: string;
   handle: string;
   role: string;
-  status: string;
-  lede: string;
-  about: string;
+  /** true = "open to work" in green. false = struck through in orange. */
+  status: boolean;
   calUrl: string;
-  email: string;
   resume: string;
   socials: LinkItem[];
   now: NowItem[];
-  skills: string[];
+  skills: Skill[];
   work: Role[];
   projects: Project[];
   piExtensions: PiExt[];

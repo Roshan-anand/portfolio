@@ -4,12 +4,8 @@ export const profile: Profile = {
   name: "Roshan Anand",
   handle: "rshn",
   role: "Backend · Cloud · Fullstack",
-  status: "open to work",
-  lede: "I ship backends, the boxes they run on, and the pages in front. On contract. Open to the next role.",
-  about:
-    "I write Go and TypeScript. PostgreSQL when it matters, SQLite when it doesn’t. Linux, Git, Docker, Traefik, EC2.",
+  status: false,
   calUrl: "https://cal.com/roshan-anand/30min",
-  email: "roshan4nand@gmail.com",
   resume: "https://dub.sh/rshn",
   socials: [
     {
@@ -33,16 +29,16 @@ export const profile: Profile = {
   now: [
     {
       spans: [
-        { text: "Building " },
-        { text: "hasu", href: "https://hasu.rshn.cloud" },
-        { text: " — self-host deployment platform" },
+        { text: "Chose red pill, got " },
+        { text: "Rust", hl: true },
+        { text: " compiler errors 💀" },
       ],
     },
     {
       spans: [
-        { text: "Experiment on different " },
-        { text: "AI workflow", hl: true },
-        { text: "." },
+        { text: "Building " },
+        { text: "hasu", href: "https://hasu.rshn.cloud" },
+        { text: " — self-host deployment platform" },
       ],
     },
     {
@@ -54,19 +50,29 @@ export const profile: Profile = {
     },
   ],
   skills: [
-    "Golang",
-    "Typescript",
-    "PERN",
-    "Svelte",
-    "Postgresql",
-    "SQLite",
-    "linux",
-    "git",
-    "Docker",
-    "Traefik",
-    "aws EC2",
+    { name: "Golang", color: "#00ADD8", light: true },
+    { name: "Typescript", color: "#3178C6" },
+    { name: "RUST", color: "#FF3E00" },
+    { name: "PERN", color: "#D63384" },
+    { name: "Svelte", color: "#FF3E00" },
+    { name: "Postgresql", color: "#336791" },
+    { name: "SQLite", color: "#4CAF50" },
+    { name: "linux", color: "#FCC624" },
+    { name: "git", color: "#F05032" },
+    { name: "Docker", color: "#2496ED" },
+    { name: "Traefik", color: "#24D1C7" },
+    { name: "aws EC2", color: "#FF9900" },
   ],
   work: [
+    {
+      org: "Naviget",
+      role: "Full stack engineer",
+      type: "Intern",
+      period: "Oct 2026 — Present",
+      href: "https://naviget.in",
+      summary: "Working on Internal dashboard and mobile app.",
+      tech: ["RUST", "Dioxus", "Flutter"],
+    },
     {
       org: "Pradxclusive",
       role: "Tech consultant & developer",

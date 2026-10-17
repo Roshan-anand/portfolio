@@ -234,13 +234,27 @@ img {
 }
 
 .hero__status {
+  --status: var(--color-accent);
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
   margin-left: var(--space-md);
   font-size: var(--text-xs);
-  color: var(--color-accent);
+  color: var(--status);
   line-height: 1;
+}
+
+.hero__status--accent {
+  --status: var(--color-accent);
+}
+
+.hero__status--orange {
+  --status: var(--color-orange);
+}
+
+.hero__status--struck .hero__status-text {
+  text-decoration: line-through;
+  text-decoration-color: var(--status);
 }
 
 .hero__status-sub {
@@ -254,18 +268,18 @@ img {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-accent);
-  box-shadow: 0 0 3px 1px color-mix(in srgb, var(--color-accent) 60%, transparent);
+  background: var(--status);
+  box-shadow: 0 0 3px 1px color-mix(in srgb, var(--status) 60%, transparent);
   animation: status-glow 2.4s ease-in-out infinite;
 }
 
 @keyframes status-glow {
   0%,
   100% {
-    box-shadow: 0 0 2px 1px color-mix(in srgb, var(--color-accent) 45%, transparent);
+    box-shadow: 0 0 2px 1px color-mix(in srgb, var(--status) 45%, transparent);
   }
   50% {
-    box-shadow: 0 0 5px 2px color-mix(in srgb, var(--color-accent) 70%, transparent);
+    box-shadow: 0 0 5px 2px color-mix(in srgb, var(--status) 70%, transparent);
   }
 }
 
