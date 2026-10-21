@@ -99,17 +99,18 @@ export const profile: Profile = {
       stack: "TypeScript",
       description:
         "An online multiplayer drawing and guessing pictionary game.",
-      live: "https://sketchy-io.rshn.cloud",
+      // live: "https://sketchy-io.rshn.cloud",
+      live: null,
       repo: "https://github.com/Roshan-anand/sketchy_io",
     },
-    {
-      title: "Code Join",
-      stack: "TypeScript",
-      description:
-        "A collaborative cloud IDE where you can code with friends and colleagues in real time.",
-      live: "https://codejoin.rshn.cloud",
-      repo: "https://github.com/Roshan-anand/code-join",
-    },
+    // {
+    //   title: "Code Join",
+    //   stack: "TypeScript",
+    //   description:
+    //     "A collaborative cloud IDE where you can code with friends and colleagues in real time.",
+    //   live: "https://codejoin.rshn.cloud",
+    //   repo: "https://github.com/Roshan-anand/code-join",
+    // },
   ],
   piExtensions: [
     {
