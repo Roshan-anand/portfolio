@@ -70,7 +70,7 @@ export const profile: Profile = {
       type: "Intern",
       period: "Oct 2026 — Present",
       href: "https://naviget.in",
-      summary: "Working on Internal dashboard and mobile app.",
+      summary: "Working on Mobile App, Backend and Admin panel for Naviget.",
       tech: ["RUST", "Postgresql", "Flutter"],
     },
     {
