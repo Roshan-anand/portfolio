@@ -163,7 +163,7 @@ img {
   gap: var(--space-xl);
   align-items: center;
   padding-block-start: var(--space-xl);
-  padding-block-end: var(--space-xl);
+  padding-block-end: calc(var(--space-xl) * 1.4);
 }
 
 .hero__figure {
@@ -428,11 +428,11 @@ img {
 
 /* ——— Sections ——— */
 .block {
-  padding-block: var(--space-lg);
+  padding-block: calc(var(--space-lg) * 1.4);
 }
 
 #projects {
-  margin-block-start: calc(var(--space-lg) * 0.1);
+  margin-block-start: calc(var(--space-lg) * 0.14);
 }
 
 #pi-extensions {
@@ -849,7 +849,7 @@ img {
 @media (min-width: 40rem) {
   .hero {
     padding-block-start: var(--space-2xl);
-    padding-block-end: var(--space-2xl);
+    padding-block-end: calc(var(--space-2xl) * 1.4);
   }
 
   .hero__portrait {
@@ -862,7 +862,7 @@ img {
     display: flex;
     gap: var(--space-3xl);
     padding-block-start: var(--space-2xl);
-    padding-block-end: var(--space-2xl);
+    padding-block-end: calc(var(--space-2xl) * 1.4);
   }
 
   .hero__figure {
