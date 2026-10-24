@@ -4,7 +4,7 @@ export const profile: Profile = {
   name: "Roshan Anand",
   handle: "rshn",
   role: "Backend · Cloud · Fullstack",
-  status: false,
+  status: true,
   calUrl: "https://cal.com/roshan-anand/30min",
   resume: "https://dub.sh/rshn",
   socials: [
