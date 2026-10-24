@@ -163,7 +163,7 @@ img {
   gap: var(--space-xl);
   align-items: center;
   padding-block-start: var(--space-xl);
-  padding-block-end: var(--space-3xl);
+  padding-block-end: var(--space-xl);
 }
 
 .hero__figure {
@@ -428,7 +428,15 @@ img {
 
 /* ——— Sections ——— */
 .block {
-  padding-block: var(--space-2xl);
+  padding-block: var(--space-lg);
+}
+
+#projects {
+  margin-block-start: calc(var(--space-lg) * 0.1);
+}
+
+#pi-extensions {
+  padding-block-end: var(--space-2xl);
 }
 
 .block--tight {
@@ -841,7 +849,7 @@ img {
 @media (min-width: 40rem) {
   .hero {
     padding-block-start: var(--space-2xl);
-    padding-block-end: var(--space-4xl);
+    padding-block-end: var(--space-2xl);
   }
 
   .hero__portrait {
@@ -854,7 +862,7 @@ img {
     display: flex;
     gap: var(--space-3xl);
     padding-block-start: var(--space-2xl);
-    padding-block-end: var(--space-4xl);
+    padding-block-end: var(--space-2xl);
   }
 
   .hero__figure {
