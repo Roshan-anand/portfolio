@@ -43,25 +43,18 @@ export const profile: Profile = {
     },
     {
       spans: [
-        { text: "Exploring cloud tech like " },
-        { text: "AI sandboxing", hl: true },
-        { text: "." },
+        { text: "Writing this line to simply fill up my portfolio." },
       ],
     },
   ],
   skills: [
+    { name: "RUST", color: "#FF3E00" },
     { name: "Golang", color: "#00ADD8", light: true },
     { name: "Typescript", color: "#3178C6" },
-    { name: "RUST", color: "#FF3E00" },
-    { name: "PERN", color: "#D63384" },
-    { name: "Svelte", color: "#FF3E00" },
+    { name: "Flutter", color: "#02569B" },
     { name: "Postgresql", color: "#336791" },
-    { name: "SQLite", color: "#4CAF50" },
     { name: "linux", color: "#FCC624" },
-    { name: "git", color: "#F05032" },
-    { name: "Docker", color: "#2496ED" },
-    { name: "Traefik", color: "#24D1C7" },
-    { name: "aws EC2", color: "#FF9900" },
+    {name: "👀 stack doesn't matter right ?", color: "#FFFFFF" },
   ],
   work: [
     {
