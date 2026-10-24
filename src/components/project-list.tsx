@@ -17,7 +17,7 @@ export function ProjectList() {
                   live
                 </a>
               ) : (
-                <span className="work-item__muted">{project.status ?? "not deployed"}</span>
+                <span className="work-item__muted">{project.status ?? "EC2 unavailable"}</span>
               )}
               {project.repo ? (
                 <a className="work-item__link" href={project.repo}>

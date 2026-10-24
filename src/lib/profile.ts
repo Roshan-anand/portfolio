@@ -71,7 +71,7 @@ export const profile: Profile = {
       period: "Oct 2026 — Present",
       href: "https://naviget.in",
       summary: "Working on Internal dashboard and mobile app.",
-      tech: ["RUST", "Dioxus", "Flutter"],
+      tech: ["RUST", "Postgresql", "Flutter"],
     },
     {
       org: "Pradxclusive",
@@ -103,14 +103,15 @@ export const profile: Profile = {
       live: null,
       repo: "https://github.com/Roshan-anand/sketchy_io",
     },
-    // {
-    //   title: "Code Join",
-    //   stack: "TypeScript",
-    //   description:
-    //     "A collaborative cloud IDE where you can code with friends and colleagues in real time.",
-    //   live: "https://codejoin.rshn.cloud",
-    //   repo: "https://github.com/Roshan-anand/code-join",
-    // },
+    {
+      title: "Code Join",
+      stack: "TypeScript",
+      description:
+        "A collaborative cloud IDE where you can code with friends and colleagues in real time.",
+      // live: "https://codejoin.rshn.cloud",
+      live: null,
+      repo: "https://github.com/Roshan-anand/code-join",
+    },
   ],
   piExtensions: [
     {
