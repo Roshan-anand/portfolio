@@ -4,6 +4,7 @@ import { WorkList } from "@/components/work-list";
 import { ProjectList } from "@/components/project-list";
 import { PiExtList } from "@/components/pi-ext-list";
 import { SiteFooter } from "@/components/site-footer";
+import { Ascii } from "ascii.rest/react";
 
 export default function Page() {
   return (
@@ -12,21 +13,33 @@ export default function Page() {
       <main className="shell">
         <HeroSplit />
 
-        <section className="block stack-block reveal" id="work" style={{ "--i": 1 } as React.CSSProperties}>
+        <section
+          className="block stack-block reveal"
+          id="work"
+          style={{ "--i": 1 } as React.CSSProperties}
+        >
           <h2 className="cat">
             <span className="cat__mark">$</span> cat work
           </h2>
           <WorkList />
         </section>
 
-        <section className="block stack-block reveal" id="projects" style={{ "--i": 2 } as React.CSSProperties}>
+        <section
+          className="block stack-block reveal"
+          id="projects"
+          style={{ "--i": 2 } as React.CSSProperties}
+        >
           <h2 className="cat">
             <span className="cat__mark">$</span> cat projects
           </h2>
           <ProjectList />
         </section>
 
-        <section className="block stack-block reveal" id="pi-extensions" style={{ "--i": 3 } as React.CSSProperties}>
+        <section
+          className="block stack-block reveal"
+          id="pi-extensions"
+          style={{ "--i": 3 } as React.CSSProperties}
+        >
           <h2 className="cat">
             <span className="cat__mark">$</span> cat custom-pi-extensions
           </h2>
@@ -35,6 +48,9 @@ export default function Page() {
       </main>
       <div className="shell">
         <SiteFooter />
+        <div className="overflow-hidden  h-80 mx-auto flex items-center justify-center my-5">
+          <Ascii piece="night-coast" className="size-75" />
+        </div>
       </div>
     </>
   );

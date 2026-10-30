@@ -9,6 +9,7 @@ import { CtaChip } from "@/components/cta-chip";
 import { NowList } from "@/components/now-list";
 import { SkillChips } from "@/components/skill-chips";
 import { PixelatedProfile } from "./pixel-profile";
+import Image from "next/image";
 
 const SOCIAL_ICONS: Record<string, IconType> = {
   github: FiGithub,
@@ -31,7 +32,8 @@ export function HeroSplit() {
       <div className="hero__identity">
         <div className="hero__heading">
           <div className="hero__title">
-            <h1 className="hero__name">{profile.name}</h1>
+            <Image src="/roshan-anand.dark.svg" width="200" height="200" alt="" className="w-100"/>
+            {/*<h1 className="hero__name">{profile.name}</h1>*/}
             <p className="hero__role">{profile.role}</p>
           </div>
           <div className="hero__status-block">
