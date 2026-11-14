@@ -3,9 +3,8 @@ import type { Profile } from "@/lib/types";
 export const profile: Profile = {
   name: "Roshan Anand",
   handle: "rshn",
-  role: "Backend · Cloud · Fullstack",
+  role: "Software Engineer · Human" ,
   status: true,
-  calUrl: "https://cal.com/roshan-anand/30min",
   resume: "https://dub.sh/rshn",
   socials: [
     {
@@ -106,20 +105,4 @@ export const profile: Profile = {
       repo: "https://github.com/Roshan-anand/code-join",
     },
   ],
-  piExtensions: [
-    {
-      title: "pi-140k-context",
-      description:
-        "Footer monitor for pi. Shows context usage against a fixed 140k window to flag the degradation zone.",
-      repo: "https://github.com/Roshan-anand/pi-140k-context",
-    },
-    {
-      title: "pi-real-talk",
-      description:
-        "Injects talk rules into pi so it drops fluff and gets to the point. Caveman, unslop, and mix modes.",
-      repo: "https://github.com/Roshan-anand/pi-real-talk",
-    },
-  ],
 };
-
-export const callHref = profile.calUrl || "#";

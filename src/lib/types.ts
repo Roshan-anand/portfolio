@@ -53,12 +53,10 @@ export type Profile = {
   role: string;
   /** true = "open to work" in green. false = struck through in orange. */
   status: boolean;
-  calUrl: string;
   resume: string;
   socials: LinkItem[];
   now: NowItem[];
   skills: Skill[];
   work: Role[];
   projects: Project[];
-  piExtensions: PiExt[];
 };

@@ -26,13 +26,19 @@ export function HeroSplit() {
       id="top"
       style={{ "--i": 0 } as React.CSSProperties}
     >
-      <figure className="hero__figure">
+      {/*<figure className="hero__figure">
         <PixelatedProfile />
-      </figure>
+      </figure>*/}
       <div className="hero__identity">
         <div className="hero__heading">
           <div className="hero__title">
-            <Image src="/roshan-anand.dark.svg" width="200" height="200" alt="" className="w-100"/>
+            <Image
+              src="/roshan-anand.dark.svg"
+              width="200"
+              height="200"
+              alt=""
+              className="w-100"
+            />
             {/*<h1 className="hero__name">{profile.name}</h1>*/}
             <p className="hero__role">{profile.role}</p>
           </div>
@@ -49,30 +55,27 @@ export function HeroSplit() {
         <NowList items={profile.now} />
         <SkillChips skills={profile.skills} />
         <div className="hero__divider" aria-hidden="true" />
-        <div className="hero__contact">
-          <ul className="hero__socials">
-            {profile.socials.map((item) => {
-              const Icon = item.icon ? SOCIAL_ICONS[item.icon] : null;
-              return (
-                <li key={item.label}>
-                  <a
-                    className="hero__social"
-                    href={item.href}
-                    aria-label={item.label}
-                  >
-                    {Icon ? <Icon className="hero__social-icon" /> : item.label}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-          <div className="hero__actions">
-            <CtaChip href={callHref}>book a call</CtaChip>
-            <CtaChip href={profile.resume} variant="ghost">
-              resume
-            </CtaChip>
-          </div>
-        </div>
+        <ul className="hero__socials w-full">
+          {profile.socials.map((item) => {
+            const Icon = item.icon ? SOCIAL_ICONS[item.icon] : null;
+            return (
+              <li key={item.label}>
+                <a
+                  className="hero__social"
+                  href={item.href}
+                  aria-label={item.label}
+                >
+                  {Icon ? <Icon className="hero__social-icon" /> : item.label}
+                </a>
+              </li>
+            );
+          })}
+          <CtaChip href={profile.resume}
+            // variant="ghost"
+            className="ml-auto">
+            resume
+          </CtaChip>
+        </ul>
       </div>
     </section>
   );
