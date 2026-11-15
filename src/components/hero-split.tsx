@@ -4,11 +4,10 @@ import { RiDiscordLine } from "react-icons/ri";
 import { TbBrandReddit } from "react-icons/tb";
 import { GoMail } from "react-icons/go";
 import type { IconType } from "react-icons";
-import { callHref, profile } from "@/lib/profile";
+import { profile } from "@/lib/profile";
 import { CtaChip } from "@/components/cta-chip";
 import { NowList } from "@/components/now-list";
 import { SkillChips } from "@/components/skill-chips";
-import { PixelatedProfile } from "./pixel-profile";
 import Image from "next/image";
 
 const SOCIAL_ICONS: Record<string, IconType> = {
@@ -70,9 +69,11 @@ export function HeroSplit() {
               </li>
             );
           })}
-          <CtaChip href={profile.resume}
+          <CtaChip
+            href={profile.resume}
             // variant="ghost"
-            className="ml-auto">
+            className="ml-auto"
+          >
             resume
           </CtaChip>
         </ul>
