@@ -6,6 +6,7 @@ export const profile: Profile = {
   role: "Software Engineer · Human" ,
   status: true,
   resume: "https://dub.sh/rshn",
+  email: "roshan4nand@gmail.com",
   socials: [
     {
       label: "github",

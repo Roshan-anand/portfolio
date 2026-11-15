@@ -3,16 +3,13 @@ import { HeroSplit } from "@/components/hero-split";
 import { WorkList } from "@/components/work-list";
 import { ProjectList } from "@/components/project-list";
 import { SiteFooter } from "@/components/site-footer";
-import { Ascii } from "ascii.rest/react";
 
 export default function Page() {
   return (
     <>
       <SiteNav />
       <main className="shell">
-        <div className="hidden overflow-hidden mx-auto xl:flex items-center justify-center my-4 border-4 rounded-md border-rule">
-          <Ascii piece="night-coast" className="size-60 rounded-md" />
-        </div>
+
         <HeroSplit />
 
         <section

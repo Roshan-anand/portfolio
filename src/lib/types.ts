@@ -54,6 +54,7 @@ export type Profile = {
   /** true = "open to work" in green. false = struck through in orange. */
   status: boolean;
   resume: string;
+  email: string;
   socials: LinkItem[];
   now: NowItem[];
   skills: Skill[];
